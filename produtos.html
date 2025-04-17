@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="produtos.css">
+  <!-- Ícones do Bootstrap -->
+  <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+  <link rel="shortcut icon" href="favicon/ImagemWhatsApp.jpg" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <a href="#" class="logo">Deal<span>Fast</span></a>
+    <nav>
+      <div class="hamburger">
+        <i class="bi bi-list"></i>
+      </div>
+      <ul class="nav-links">
+        <a href="inicio.html">Início</a>
+        <a href="serviços.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+
+        <div class="btn">
+          <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
+          <button onclick="window.location.href='entrar.html'">
+            Usuário <i class="bi bi-person" style="font-size: 20px;"></i>
+          </button>
+        </div>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="scroll sessao-1">
+      <h2>Produtos</h2>
+      <p>Navegue pela nossa seleção de dispositivos e acessórios</p>
+    </section>
+
+    <!-- Filtro de categorias -->
+    <section class="scroll sessao-2">
+      <div class="listagem">
+        <h3>Todos</h3>
+        <select id="categoriaSelect">
+          <option value="todos">Todos</option>
+          <option value="mac">Mac</option>
+          <option value="ipad">iPad</option>
+          <option value="iphone">iPhone</option>
+          <option value="airpods">AirPods</option>
+          <option value="watch">Apple Watch</option>
+          <option value="acessorios">Acessórios</option>
+        </select>
+      </div>
+
+      <!-- Lista de produtos -->
+      <div class="agrupamento-img-p">
+        <!-- Produto 1 -->
+        <div class="sub-container-medio" data-id="prod1" data-category="mac">
+          <a href="teste.html">
+            <img src="img-mac/img-sessao-2/macbook-air.png" alt="MacBook Pro">
+            <p class="modelo modelo-negrito">MacBook Pro</p>
+           
+          </a>
+          <div class="p-bt">
+            <p>700.000 AOA</p>
+            <button type="button" class="bt-carrinho">
+              <i class="bi bi-cart-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <!-- Produto 2 -->
+        <div class="sub-container-medio" data-id="prod2" data-category="ipad">
+          <a href="produto-detalhe.html">
+            <img src="img-mac/img-sessao-2/macbook-air.png" alt="iPad Pro">
+            <p class="modelo modelo-negrito">iPad Pro</p>
+           
+          </a>
+          <div class="p-bt">
+            <p>600.000 AOA</p>
+            <button type="button" class="bt-carrinho">
+              <i class="bi bi-cart-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <!-- Produto 3 -->
+        <div class="sub-container-medio" data-id="prod3" data-category="iphone">
+          <a href="produto-detalhe.html">
+            <img src="img-mac/img-sessao-2/macbook-pro.png" alt="iPhone 14">
+            <p class="modelo modelo-negrito">iPhone 14</p>
+            
+          </a>
+          <div class="p-bt">
+            <p>800.000 AOA</p>
+            <button type="button" class="bt-carrinho">
+              <i class="bi bi-cart-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <div class="sub-container-medio" data-id="prod3" data-category="iphone">
+          <a href="produto-detalhe.html">
+            <img src="img-mac/img-sessao-2/macbook-pro.png" alt="iPhone 14">
+            <p class="modelo modelo-negrito">iPhone 14</p>
+            
+          </a>
+          <div class="p-bt">
+            <p>800.000 AOA</p>
+            <button type="button" class="bt-carrinho">
+              <i class="bi bi-cart-plus"></i> Adicionar
+            </button>
+          </div>
+        </div>
+        <!-- Você pode adicionar mais produtos seguindo o mesmo padrão -->
+      </div>
+    </section>
+  </main>
+
+  <script src="produtos.js"></script>
+</body>
+
+</html>

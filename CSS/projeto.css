@@ -1,0 +1,632 @@
+/* estilo global */
+* {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px; /* Define um espaçamento de letras */
+  font-weight: 300; /* Define o peso da fonte */
+}
+
+/* estilo do corpo do programa */
+body {
+  overflow-x: hidden; /* Remove barra de rolagem horizontal */
+  background-color: #f5f7f8c5; /* Define cor de fundo */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte do corpo */
+  color: black; /* Define a cor do texto */
+}
+
+/* estilo do cabeçalho */
+header {
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  display: flex; /* Exibe itens em linha */
+  justify-content: space-around; /* Espaça itens igualmente */
+  align-items: center; /* Centraliza itens verticalmente */
+  z-index: 99; /* Define a camada do cabeçalho */
+  background-color: #289094; /* Define a cor de fundo do cabeçalho */
+
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 5rem; /* Define a altura do cabeçalho */
+}
+
+/* inicio do estilo da logo da loja */
+.logo {
+  color: white; /* Define a cor da logo */
+  font-size: 2.5rem; /* Tamanho da fonte da logo */
+  text-decoration: none; /* Remove o sublinhado da logo */
+}
+.logo span {
+  color: #2adae0; /* Cor do span dentro da logo */
+}
+/* fim do estilo da logo da loja */
+
+/* inicio do estilo do ícone do Hamburger */
+.hamburger {
+  display: none; /* Oculta o ícone por padrão */
+  position: absolute; /* Posiciona o ícone */
+  cursor: pointer; /* Muda o cursor para indicar clicável */
+  right: 5%; /* Alinha à direita */
+  top: 50%; /* Alinha verticalmente ao centro */
+  transform: translate(-5%, -50%); /* Ajusta posição do ícone */
+  z-index: 2; /* Define a camada do ícone */
+}
+
+.hamburger i {
+  font-size: 30px; /* Tamanho do ícone */
+  color: #f2f5f7; /* Cor do ícone */
+  transition: transform 0.7s ease; /* Animação suave na transformação */
+}
+/* Animação do Ícone do Hamburger */
+.hamburger.toggle i {
+  transform: rotate(90deg); /* Rotaciona o ícone ao abrir */
+}
+/* fim do estilo do ícone do Hamburger */
+
+/* inicio da estilização dos links do menu */
+.nav-links {
+  display: flex; /* Exibe links em linha */
+  align-items: center; /* Centraliza links verticalmente */
+}
+
+.nav-links a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  transition: 0.8s;
+  margin: 0 auto;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links > i {
+  color: #fff;
+  font-size: 22px;
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  margin-left: 1rem; /* Espaçamento à esquerda */
+  color: #fff; /* Cor dos links */
+  text-align: right; /* Alinha texto à direita */
+  font-size: 1.2rem; /* Tamanho da fonte dos links */
+}
+
+/* fim da estilização dos links do menu */
+
+/* inicio da estilização dos botões do menu */
+button {
+  background-color: transparent; /* Fundo transparente */
+  border: 1px solid #f2f5f7; /* Borda dos botões */
+  border-radius: 2rem; /* Bordas arredondadas */
+  padding: 0.4rem 0.6rem; /* Espaçamento interno dos botões */
+  margin-left: 2vw; /* Espaçamento à esquerda */
+  font-size: 1.1rem; /* Tamanho da fonte dos botões */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto do botão */
+}
+/* estilização dos botões do menu quando o mouse estiver por cima dos botões */
+button:hover {
+  color: #289094; /* Cor do texto ao passar o mouse */
+  background-color: #f2f5f7; /* Cor de fundo ao passar o mouse */
+  border: 1.5px solid #f2f5f7; /* Ajusta borda ao passar o mouse */
+  transition: all ease-in-out 350ms; /* Animação suave na transição */
+}
+/* fim da estilização dos botões do menu */
+
+/* inicio do conteúdo da página (main) */
+
+/* inicio da estilização da primeira sessão */
+
+/* container e cor do fundo da primeira div da página */
+.container-sessao-1 {
+  display: flex; /* Exibe itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 5rem; /* Espaçamento interno */
+  margin-bottom: 50px; /* Espaçamento inferior */
+  background-color: #f5f7f8c5; /* Cor de fundo */
+}
+
+/* estilização do h2 da primeira sessão */
+.texto > h2 {
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+.texto h2 {
+  font-size: 2.5rem; /* Tamanho da fonte do h2 */
+  margin-bottom: 1.5rem; /* Espaçamento inferior do h2 */
+}
+
+/* esta div trata do espaçamento entre o texto e a imagem */
+.texto {
+  height: 100%; /* Altura total */
+  flex-basis: 50%; /* Ocupa 50% do espaço disponível */
+}
+
+/* estilização do texto */
+.texto p {
+  line-height: 1.5rem; /* Altura da linha do texto */
+  margin-bottom: 1.5rem; /* Espaçamento inferior do texto */
+  text-align: justify; /* Alinha texto justificado */
+}
+
+/* estilização do botão */
+.texto button {
+  background-color: #2adae0; /* Cor de fundo do botão */
+  border: none; /* Remove borda do botão */
+  cursor: pointer; /* Indica que é clicável */
+  padding: 0.8rem 3.8rem; /* Espaçamento interno do botão */
+  border-radius: 9999px; /* Bordas totalmente arredondadas */
+  color: #fff; /* Cor do texto do botão */
+  font-weight: 500; /* Peso da fonte do botão */
+  font-size: 1rem; /* Tamanho da fonte do botão */
+  transition: all 0.2s; /* Animação suave em todas as propriedades */
+  position: relative;
+  left: 10rem;
+  bottom: 18px;
+}
+
+/* esta div trata do espaçamento entre a imagem e o texto */
+.imagem {
+  flex-basis: 50%; /* Ocupa 50% do espaço disponível */
+  display: flex; /* Exibe itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* estilização da imagem */
+.imagem img {
+  width: 50%; /* Largura da imagem */
+  height: auto; /* Altura automática para manter proporção */
+}
+/* fim da estilização da primeira sessão */
+
+/* inicio da estilização da seção últimos lançamentos */
+.container_e_cor_do_fundo_escuro {
+  display: flex; /* Exibe itens em linha */
+  flex-direction: column; /* Itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 1rem; /* Espaçamento interno */
+  background-color: #289094; /* Cor de fundo escura */
+  margin-bottom: 50px; /* Espaçamento inferior */
+}
+
+.h3-fundo-escuro {
+  margin-bottom: 20px; /* Espaçamento inferior */
+  color: #fff; /* Cor do texto */
+  font-size: 2rem; /* Tamanho da fonte */
+  border-bottom: 2px solid #2adae0; /* Borda inferior do título */
+}
+
+/* esta div trata da organização e espaçamento das imagens da seção últimos lançamentos */
+.agrupamento-das-img-p-estrelas {
+  display: flex; /* Exibe itens em linha */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaçamento entre itens */
+  margin-bottom: 50px;
+}
+
+.imagens > img {
+  width: 50%; /* Largura das imagens */
+  max-width: 200px; /* Largura máxima das imagens */
+  height: auto; /* Altura automática para manter proporção das imagens */
+}
+
+.container_e_cor_do_fundo_claro {
+  display: flex; /* Exibe itens em linha */
+  flex-direction: column; /* Itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 1rem; /* Espaçamento interno */
+  background-color: #f5f7f8c5; /* Cor de fundo clara */
+  margin-bottom: 50px; /* Espaçamento inferior */
+}
+
+/* Estilização de parágrafos dentro do sub-container */
+.sub-container p {
+  margin-bottom: 10px; /* Espaçamento inferior dos parágrafos */
+}
+
+/* Estilização de elementos de estrelas dentro do sub-container */
+.sub-container > .Estrelas {
+  margin-bottom: 10px; /* Espaçamento inferior das estrelas */
+}
+
+/* Estilo para o modelo de produto */
+.modelo {
+  font-weight: bold; /* Negrito */
+  gap: 20px; /* Espaçamento entre os itens */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Cor das estrelas */
+.Estrelas > i {
+  color: yellow; /* Cor das estrelas */
+}
+
+/* Agrupamento das imagens e estrelas em duas colunas */
+#agrupamento-das-img-p-estrelas-em-duas-colunas {
+  display: flex; /* Exibe itens em linha */
+  justify-content: space-between; /* Espaça itens igualmente */
+  gap: 20px; /* Espaçamento entre itens */
+  margin-bottom: 50px;
+}
+
+/* Estilo para sub-container com dois itens em coluna */
+.sub-container-2colunas {
+  text-align: center; /* Centraliza texto */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Indica que é clicável */
+  box-shadow: 3px 3px 3px 3px rgba(219, 209, 209, 0.836); /* Sombra ao redor */
+  width: 13rem;
+  height: 21rem;
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+/* Estilização das imagens dentro do sub-container de duas colunas */
+.sub-container-2colunas img {
+  width: 100%; /* Largura total do contêiner */
+  max-width: 200px; /* Largura máxima das imagens */
+  height: 180px; /* Altura fixa das imagens */
+}
+
+/* Espaçamento inferior das imagens dentro do sub-container de duas colunas */
+.sub-container-2colunas img {
+  margin-bottom: 10px; /* Espaçamento inferior das imagens */
+}
+
+/* Estilização de estrelas dentro do sub-container de duas colunas */
+.sub-container-2colunas > .Estrelas {
+  margin-bottom: 10px; /* Espaçamento inferior das estrelas */
+}
+
+/* Estilização de parágrafos dentro do sub-container de duas colunas */
+.sub-container-2colunas p {
+  margin-bottom: 10px; /* Espaçamento inferior dos parágrafos */
+}
+
+/* Efeito de hover para sub-container de duas colunas */
+.sub-container-2colunas:hover {
+  transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+  box-shadow: 8px 8px 8px 8px rgba(219, 209, 209, 0.836); /* Aumenta sombra ao passar o mouse */
+  transition: transform 0.5s;
+}
+
+/* Estilização do título na seção com fundo claro */
+.h3-fundo-claro {
+  margin-bottom: 40px; /* Espaçamento inferior */
+  color: black; /* Cor do texto */
+  font-size: 2rem; /* Tamanho da fonte */
+}
+
+/* Estilização de h3 dentro do título claro */
+.h3-fundo-claro > h3 {
+  border-bottom: 2px solid #2adae0; /* Borda inferior do título */
+}
+
+/* Estilização do sub-container geral */
+.sub-container {
+  text-align: center; /* Centraliza texto */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Indica que é clicável */
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 6px;
+  padding: 5px;
+  width: 13rem;
+  height: 21rem;
+}
+
+.botao button{
+  background-color: #2c2c2c;
+  color: #2adae0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px solid #fff;
+  margin: 0px;
+}
+
+.botao button:hover{
+  background-color: #289094;
+  color: #2c2c2c;
+}
+
+/* Estilização do produtos populares */
+.container_e_cor_do_fundo_claro .sub-container {
+  text-align: center; /* Centraliza texto */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Indica que é clicável */
+  box-shadow: 5px 5px 5px 5px rgba(219, 209, 209, 0.836); /* Sombra ao redor */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  width: 13rem;
+  height: 21rem;
+}
+
+/* Efeito de hover para sub-container no fundo claro */
+.container_e_cor_do_fundo_claro .sub-container:hover {
+  transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+  transition: transform 0.5s;
+  box-shadow: 8px 8px 8px 8px rgba(219, 209, 209, 0.836); /* Aumenta sombra ao passar o mouse */
+}
+
+/* Estilização de parágrafos na seção de últimos lançamentos */
+.paragrafo_ultimos_lançamentos p {
+  line-height: 1.5rem; /* Altura da linha do texto */
+  margin-bottom: 1.5rem; /* Espaçamento inferior do texto */
+  text-align: justify; /* Alinha texto justificado */
+  color: #fff; /* Cor do texto */
+}
+
+/* Efeito de hover para sub-container */
+.sub-container:hover {
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  transition: transform 0.5s;
+}
+
+/* Estilização de imagens dentro do sub-container */
+.sub-container img {
+  width: 100%; /* Largura total do contêiner */
+  max-width: 200px; /* Largura máxima das imagens */
+  height: 180px; /* Altura fixa das imagens */
+}
+
+/* Espaçamento inferior das imagens dentro do sub-container */
+.sub-container img {
+  margin-bottom: 10px; /* Espaçamento inferior das imagens */
+}
+
+/* Espaçamento inferior dos parágrafos dentro do sub-container */
+.sub-container p {
+  margin-bottom: 10px; /* Espaçamento inferior dos parágrafos */
+}
+
+/* container e cor do fundo da primeira div da página */
+.sessao-produto-2 {
+  display: flex;
+  background-color: #289094;
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 38rem; /* Define a altura do cabeçalho */
+  padding: 30px;
+  margin-bottom: 50px;
+}
+/* estilização do h2 da primeira sessão */
+
+.p h2 {
+  font-size: 2.3rem; /* Tamanho da fonte do h2 */
+  margin-bottom: 1.5rem; /* Espaçamento inferior do h2 */
+  position: relative; /* Posição relativa para ajustes */
+  top: 12rem; /* Afasta o h2 do seu posicionamento normal */
+  color: #fff;
+}
+
+/* esta div trata do espaçamento entre o texto e a imagem */
+.p {
+  height: 100%; /* Altura total */
+  flex-basis: 50%; /* Ocupa 50% do espaço disponível */
+}
+
+/* estilização do texto */
+.p p {
+  padding: 50px;
+  line-height: 1.5rem; /* Altura da linha do texto */
+  margin-bottom: 1.5rem; /* Espaçamento inferior do texto */
+  text-align: justify; /* Alinha texto justificado */
+  color: #fff;
+  position: relative;
+  top: 7.3rem;
+  right: 50px;
+}
+
+/* estilização do botão */
+.p button {
+  background-color: #2adae0; /* Cor de fundo do botão */
+  border: none; /* Remove borda do botão */
+  cursor: pointer; /* Indica que é clicável */
+  padding: 0.8rem 3.8rem; /* Espaçamento interno do botão */
+  border-radius: 9999px; /* Bordas totalmente arredondadas */
+  color: #fff; /* Cor do texto do botão */
+  font-weight: 500; /* Peso da fonte do botão */
+  font-size: 1rem; /* Tamanho da fonte do botão */
+  transition: all 0.2s; /* Animação suave em todas as propriedades */
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+
+/* esta div trata do espaçamento entre a imagem e o texto */
+.img {
+  flex-basis: 50%; /* Ocupa 50% do espaço disponível */
+  display: flex; /* Exibe itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* estilização da imagem */
+.img img {
+  width: 50%; /* Largura da imagem */
+  height: auto; /* Altura automática para manter proporção */
+}
+/* fim da estilização da primeira sessão */
+
+.agrupamento-icones-texto-botao:hover > :not(:hover) {
+  opacity: 0.4;
+}
+
+.agrupamento-icones-texto-botao {
+  display: flex;
+  justify-content: space-between; /* Espaça itens igualmente */
+  gap: 20px; /* Espaçamento entre itens */
+}
+
+.agrupamento-icones-texto-botao > .sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  width: 18rem;
+  height: 27rem;
+  padding: 10px;
+}
+
+.agrupamento-icones-texto-botao > .sub-container > img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.agrupamento-icones-texto-botao > .sub-container > .txt > p {
+  display: block;
+  text-align: center; /* Alinha texto justificado */
+  padding: 10px;
+  opacity: 0; /* O parágrafo começa invisível */
+}
+
+.sub-container:hover .txt > p {
+  opacity: 1; /* O parágrafo se torna visível ao passar o mouse */
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+h4 {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+section{
+  display: flex; /* Exibe itens em linha */
+  flex-direction: column; /* Itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 1rem; /* Espaçamento interno */
+  background-color: #f5f7f8c5; /* Cor de fundo escura */
+}
+
+/* responsividade */
+@media screen and (max-width: 800px) {
+  .hamburger {
+    display: block; /* Exibe o ícone do hamburger em telas menores */
+  }
+
+  .nav-links {
+    position: fixed; /* Fixa o menu de navegação */
+    background: #2c2c2c; /* Cor de fundo do menu */
+    width: 100vw; /* O menu ocupa 100% da largura da tela */
+    top: 4.5rem; /* Abaixo do navbar */
+    right: 0; /* Alinha à direita */
+    flex-direction: column; /* Itens em coluna */
+    transition: all 0.5s ease; /* Animação na transição */
+    pointer-events: none; /* Desabilita interação ao estar fechado */
+    opacity: 0; /* Inicialmente invisível */
+    z-index: 1; /* Camada do menu */
+  }
+
+  .nav-links.open {
+    pointer-events: all; /* Habilita interação quando aberto */
+    opacity: 1; /* Visível quando aberto */
+  }
+
+  .nav-links a {
+    margin: 1rem 0; /* Espaçamento entre os itens do menu */
+  }
+
+  button {
+    margin: 1rem 0; /* Espaçamento vertical dos botões */
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Aumenta o tamanho do texto para mobile */
+  }
+
+  .container {
+    flex-direction: column; /* Alinha itens em coluna */
+    text-align: center; /* Centraliza texto */
+    padding-top: 4rem; /* Espaçamento superior */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Tamanho da fonte do h2 em telas menores */
+  }
+
+  p {
+    font-size: 0.8rem; /* Tamanho da fonte do parágrafo em telas menores */
+  }
+}
+footer {
+  background-color: #289094; /* Define a cor de fundo */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 8rem; /* Define a altura automática */
+  display: flex; /* Exibe itens em linha */
+  flex-direction: column; /* Itens em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 3rem; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto ao centro */
+}
+
+.agrupamento-do-footer {
+  display: flex;
+  gap: 20px; /* Espaçamento entre itens */
+  align-items: center; /* Centraliza os itens na linha */
+  justify-content: center; /* Centraliza os itens na linha */
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.icones {
+  gap: 10px;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+footer > p {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sessao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* Garante a centralização dos itens */
+  text-align: center;
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: #fff;
+  width: 100%; /* Ajusta para 100% da largura */
+  max-width: 20rem; /* Limita o tamanho máximo */
+  height: auto; /* Deixa a altura automática */
+}
+
+.icone > i {
+  gap: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.unico {
+  margin-top: 20px;
+}
+
+.borda-superior {
+  border-top: 1px solid #fff;
+  width: 80%;
+  margin-top: 30px;
+}

@@ -1,0 +1,349 @@
+/* estilo global */
+* {
+  font-weight: 300; /* Define o peso da fonte */
+}
+
+/* estilo do corpo do programa */
+body {
+  overflow-x: hidden; /* Remove barra de rolagem horizontal */
+  background-color: #f5f7f8c5; /* Define cor de fundo */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte do corpo */
+  color: black; /* Define a cor do texto */
+}
+
+/* estilo do cabeçalho */
+header {
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  display: flex; /* Exibe itens em linha */
+  justify-content: space-around; /* Espaça itens igualmente */
+  align-items: center; /* Centraliza itens verticalmente */
+  z-index: 99; /* Define a camada do cabeçalho */
+  background-color: #289094; /* Define a cor de fundo do cabeçalho */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 5rem; /* Define a altura do cabeçalho */
+}
+
+/* inicio do estilo da logo da loja */
+.logo {
+  color: white; /* Define a cor da logo */
+  font-size: 2.5rem; /* Tamanho da fonte da logo */
+  text-decoration: none; /* Remove o sublinhado da logo */
+}
+.logo span {
+  color: #2adae0; /* Cor do span dentro da logo */
+}
+/* fim do estilo da logo da loja */
+
+/* inicio do estilo do ícone do Hamburger */
+.hamburger {
+  display: none; /* Oculta o ícone por padrão */
+  position: absolute; /* Posiciona o ícone */
+  cursor: pointer; /* Muda o cursor para indicar clicável */
+  right: 5%; /* Alinha à direita */
+  top: 50%; /* Alinha verticalmente ao centro */
+  transform: translate(-5%, -50%); /* Ajusta posição do ícone */
+  z-index: 2; /* Define a camada do ícone */
+}
+
+.hamburger i {
+  font-size: 30px; /* Tamanho do ícone */
+  color: #f2f5f7; /* Cor do ícone */
+  transition: transform 0.7s ease; /* Animação suave na transformação */
+}
+/* Animação do Ícone do Hamburger */
+.hamburger.toggle i {
+  transform: rotate(90deg); /* Rotaciona o ícone ao abrir */
+}
+/* fim do estilo do ícone do Hamburger */
+
+/* inicio da estilização dos links do menu */
+.nav-links {
+  display: flex; /* Exibe links em linha */
+  align-items: center; /* Centraliza links verticalmente */
+}
+
+.nav-links a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  transition: 0.8s;
+  margin: 0 auto;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links > i {
+  color: #fff;
+  font-size: 22px;
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  margin-left: 1rem; /* Espaçamento à esquerda */
+  color: #fff; /* Cor dos links */
+  text-align: right; /* Alinha texto à direita */
+  font-size: 1.2rem; /* Tamanho da fonte dos links */
+}
+
+/* fim da estilização dos links do menu */
+
+/* inicio da estilização dos botões do menu */
+.btn button {
+  background-color: transparent; /* Fundo transparente */
+  border: 1px solid #f2f5f7; /* Borda dos botões */
+  border-radius: 2rem; /* Bordas arredondadas */
+  padding: 0.4rem 0.6rem; /* Espaçamento interno dos botões */
+  margin-left: 2vw; /* Espaçamento à esquerda */
+  font-size: 1.1rem; /* Tamanho da fonte dos botões */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto do botão */
+}
+/* estilização dos botões do menu quando o mouse estiver por cima dos botões */
+.btn button:hover {
+  color: #289094; /* Cor do texto ao passar o mouse */
+  background-color: #f2f5f7; /* Cor de fundo ao passar o mouse */
+  border: 1.5px solid #f2f5f7; /* Ajusta borda ao passar o mouse */
+  transition: all ease-in-out 350ms; /* Animação suave na transição */
+}
+/* fim da estilização dos botões do menu */
+
+
+
+.container-sessao-1 {
+  margin-bottom: -3rem;
+}
+
+.container-sessao-1 {
+  display: flex; /* Exibe itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 5rem; /* Espaçamento interno 
+    background-color: #f5f7f8c5; /* Cor de fundo */
+}
+
+.imagem img {
+  width: 450px;
+  height: 350px;
+  margin-top: 1rem;
+  place-content: center;
+  place-items: center;
+}
+
+.imagem {
+  flex-basis: 60%; /* Ocupa 50% do espaço disponível */
+  display: flex; /* Exibe itens em linha */
+  flex-direction: column;
+  align-items: start; /* Centraliza verticalmente */
+  justify-content: start; /* Centraliza horizontalmente */
+}
+
+.texto {
+  height: 100%; /* Altura total */
+  flex-basis: 40%; /* Ocupa 50% do espaço disponível */
+}
+
+a {
+  text-decoration: none;
+}
+
+.cor-btn {
+  margin-bottom: 1px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cor-btn img {
+  margin-bottom: 10px;
+  display: flex;
+  border-radius: 50%;
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  place-content: center;
+  place-items: center;
+}
+
+.carrinho-bt-input input {
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.carrinho-bt-input button{
+  background-color: #2c2c2c;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  padding: 5px;
+  font-size: 1rem;
+}
+.btn-memoria button{
+  background-color: #f5f7f8c5;
+  color: black;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 5px;
+  font-size: 1rem;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.btn-memoria button:hover{
+  background-color: #2c2c2c;
+  color: #fff;
+  border: none;
+}
+
+.memoria p{
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+#ativo{
+  margin-left: 0;
+  background-color: #2c2c2c;
+  color: #fff;
+  border: none;
+}
+
+.img-galeria {
+  display: inline-block;
+  position: relative;
+  transition: border-color 0.3 ease;
+}
+
+.agrupamento-img-p {
+  display: flex; /* Exibe itens em linha */
+  justify-content: center; /* Espaça itens igualmente */
+  gap: 20px; /* Espaçamento entre itens */
+}
+
+.sub-container-medio {
+  text-align: center; /* Centraliza texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Indica que é clicável */
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 10px;
+  width: 17rem;
+  height: 22rem;
+  padding: 10px;
+  justify-content: center;
+  margin-bottom: 60px;
+  box-shadow: 3px 3px 3px 3px rgba(219, 209, 209, 0.836); /* Sombra ao redor */
+  text-decoration: none;
+}
+
+.sub-container-medio img {
+  margin-bottom: -40px;
+  width: 14rem;
+  height: 12rem;
+}
+
+.sub-container-medio:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s;
+}
+
+.Estrelas > i {
+  font-size: 20px;
+  color: yellow; /* Cor das estrelas */
+  margin-top: 10px;
+}
+
+.botao {
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+  left: 20px;
+}
+
+.botao button {
+  background-color: #2c2c2c;
+  border-radius: 3rem; /* Bordas arredondadas */
+  font-size: 1rem; /* Tamanho da fonte dos botões */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto do botão */
+  width: 9rem;
+  height: 2rem;
+  display: block;
+  position: relative;
+  left: 40px;
+  top: 5px;
+}
+
+.borda-lateral {
+  border: 3px solid #289094;
+  background-color: #289094;
+  width: 5px;
+  height: 1.5rem;
+  border-radius: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  left: 50px;
+}
+
+.p-sessao-2,
+.p-sessao-3,
+.p-sessao-4 {
+  text-align: start;
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: #2c2c2c;
+  position: relative;
+  left: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.span-sessao-2,
+.span-sessao-3,
+.span-sessao-4 {
+  color: #00000096;
+}
+
+.modelo {
+  font-size: 1rem;
+  text-align: start;
+  position: relative;
+  left: 15px;
+  padding: 5px;
+  margin-bottom: -15px;
+}
+.modelo-negrito {
+  font-weight: bold;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 2rem;
+}
+h3{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.separacao-p{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  place-items: center;
+  
+}

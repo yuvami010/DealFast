@@ -1,0 +1,1210 @@
+/* estilo global */
+* {
+  font-weight: 300; /* Define o peso da fonte */
+}
+
+/* estilo do corpo do programa */
+body {
+  overflow-x: hidden; /* Remove barra de rolagem horizontal */
+  background-color: #f5f7f8c5; /* Define cor de fundo */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte do corpo */
+  color: black; /* Define a cor do texto */
+}
+
+/* estilo do cabeçalho */
+header {
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  display: flex; /* Exibe itens em linha */
+  justify-content: space-around; /* Espaça itens igualmente */
+  align-items: center; /* Centraliza itens verticalmente */
+  z-index: 99; /* Define a camada do cabeçalho */
+  background-color: #289094; /* Define a cor de fundo do cabeçalho */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 5rem; /* Define a altura do cabeçalho */
+}
+
+/* inicio do estilo da logo da loja */
+.logo {
+  color: white; /* Define a cor da logo */
+  font-size: 2.5rem; /* Tamanho da fonte da logo */
+  text-decoration: none; /* Remove o sublinhado da logo */
+}
+.logo span {
+  color: #2adae0; /* Cor do span dentro da logo */
+}
+/* fim do estilo da logo da loja */
+
+/* inicio do estilo do ícone do Hamburger */
+.hamburger {
+  display: none; /* Oculta o ícone por padrão */
+  position: absolute; /* Posiciona o ícone */
+  cursor: pointer; /* Muda o cursor para indicar clicável */
+  right: 5%; /* Alinha à direita */
+  top: 50%; /* Alinha verticalmente ao centro */
+  transform: translate(-5%, -50%); /* Ajusta posição do ícone */
+  z-index: 2; /* Define a camada do ícone */
+}
+
+.hamburger i {
+  font-size: 30px; /* Tamanho do ícone */
+  color: #f2f5f7; /* Cor do ícone */
+  transition: transform 0.7s ease; /* Animação suave na transformação */
+}
+/* Animação do Ícone do Hamburger */
+.hamburger.toggle i {
+  transform: rotate(90deg); /* Rotaciona o ícone ao abrir */
+}
+/* fim do estilo do ícone do Hamburger */
+
+/* inicio da estilização dos links do menu */
+.nav-links {
+  display: flex; /* Exibe links em linha */
+  align-items: center; /* Centraliza links verticalmente */
+}
+
+.nav-links a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  transition: 0.8s;
+  margin: 0 auto;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links > i {
+  color: #fff;
+  font-size: 22px;
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  margin-left: 1rem; /* Espaçamento à esquerda */
+  color: #fff; /* Cor dos links */
+  text-align: right; /* Alinha texto à direita */
+  font-size: 1.2rem; /* Tamanho da fonte dos links */
+}
+
+/* fim da estilização dos links do menu */
+
+/* inicio da estilização dos botões do menu */
+.btn button {
+  background-color: transparent; /* Fundo transparente */
+  border: 1px solid #f2f5f7; /* Borda dos botões */
+  border-radius: 2rem; /* Bordas arredondadas */
+  padding: 0.4rem 0.6rem; /* Espaçamento interno dos botões */
+  margin-left: 20px; /* Espaçamento à esquerda */
+  font-size: 1.1rem; /* Tamanho da fonte dos botões */
+  cursor: pointer; /* Indica que é clicável */
+  color: #fff; /* Cor do texto do botão */
+}
+/* estilização dos botões do menu quando o mouse estiver por cima dos botões */
+.btn button:hover {
+  color: #289094; /* Cor do texto ao passar o mouse */
+  background-color: #f2f5f7; /* Cor de fundo ao passar o mouse */
+  border: 1.5px solid #f2f5f7; /* Ajusta borda ao passar o mouse */
+  transition: all ease-in-out 350ms; /* Animação suave na transição */
+}
+/* fim da estilização dos botões do menu */
+
+/* inicio da estilizaçao da 1a sessão*/
+
+.container-sessao-1,
+.container-sessao-3,
+.container-sessao-6,
+.container-sessao-8 {
+  display: flex; /* Exibe itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 5rem; /* Espaçamento interno 
+    background-color: #f5f7f8c5; /* Cor de fundo */
+}
+
+.sessao-1 img {
+  width: 8rem;
+  height: 5rem;
+}
+.imagem img{
+  animation: flutuar 5s infinite;
+}
+
+@keyframes flutuar { 
+  50% {
+ transform: translateY(-10%);
+}
+
+}
+
+/* esta div trata do espaçamento entre o texto e a imagem */
+
+/* esta div trata do espaçamento entre a imagem e o texto */
+.imagem,
+.imagem-sessao-3,
+.imagem-sessao-6,
+.imagem-sessao-8 {
+  flex-basis: 50%; /* Ocupa 50% do espaço disponível */
+  display: flex; /* Exibe itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.img-sessao-8 {
+  width: 15rem;
+  height: 20rem;
+}
+
+.imagem-sessao-3 {
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: pointer;
+  width: 15rem;
+  height: 29rem;
+  animation: slide 12s infinite;
+  background-position: center;
+  background-image: url(airpods/4/white.png);
+  background-repeat: no-repeat;
+}
+
+@keyframes slider {
+  0% {
+    background-size: 15rem 27rem;
+  }
+  24% {
+    background-image: url(img-sessao-3/14.png);
+    background-size: 15rem 27rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(img-sessao-3/parte-frontal.png);
+    background-size: 30rem 26rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  49% {
+    background-image: url(img-sessao-3/parte-frontal.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  50% {
+    background-image: url(img-sessao-3/parte-traseira.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  74% {
+    background-image: url(img-sessao-3/parte-traseira.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  75% {
+    background-image: url(img-sessao-3/parte-da-câmera.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  100% {
+    background-image: url(img-sessao-3/parte-da-câmera.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+}
+
+.imagem-sessao-6 {
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: pointer;
+  width: 30rem;
+  height: 27rem;
+  animation: slider-6 12s infinite;
+  background-image: url(applewatch/SE/silver.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes slider- {
+  0% {
+    background-size: 30rem 27rem;
+  }
+  24% {
+    background-image: url(img-sessao-6/parte-principal.png);
+    background-size: 30rem 27rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(img-sessao-6/parte-secundária.png);
+    background-size: 30rem 26rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  49% {
+    background-image: url(img-sessao-6/parte-secundária.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  50% {
+    background-image: url(img-sessao-6/parte-principal.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  74% {
+    background-image: url(img-sessao-6/parte-principal.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  75% {
+    background-image: url(img-sessao-6/parte-secundária.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  100% {
+    background-image: url(img-sessao-6/parte-secundária.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+}
+
+.imagem-sessao-8 {
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: pointer;
+  width: 40px;
+  height: 31rem;
+  animation: slider8 12s infinite;
+  background-image: url(iphones/15/pink.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes slider-8 {
+  0% {
+    background-size: 30rem 20rem;
+  }
+  24% {
+    background-image: url(img-sessao-8/SE.png);
+    background-size: 30rem 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(img-sessao-8/parte-frontal.png);
+    background-size: 30rem 26rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  49% {
+    background-image: url(img-sessao-8/parte-frontal.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  50% {
+    background-image: url(img-sessao-8/parte-traseira.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  74% {
+    background-image: url(img-sessao-8/parte-traseira.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  75% {
+    background-image: url(img-sessao-8/parte-da-camara.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+  100% {
+    background-image: url(img-sessao-8/parte-da-camara.png);
+    background-repeat: no-repeat;
+    background-size: 30rem 26rem;
+    background-position: center;
+  }
+}
+
+/* estilização da imagem */
+.imagem img {
+  margin-top: 3rem;
+  width: 25rem; /* Largura da imagem */
+  height: 15rem; /* Altura automática para manter proporção */
+}
+
+.imagem img:hover {
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.p-sessao-1,
+.p-sessao-3,
+.p-sessao-6,
+.p-sessao-8 {
+  text-align: center;
+  margin-top: 4rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #2c2c2c;
+}
+
+.p-sessao-3,
+.p-sessao-6,
+.p-sessao-8 {
+  font-size: 1.5rem;
+}
+
+.texto {
+  height: 100%; /* Altura total */
+  flex-basis: 50%; /* Ocupa 50% do espaço disponível */
+}
+
+.span-sessao-1,
+.span-sessao-3,
+.span-sessao-6,
+.span-sessao-8 {
+  font-weight: bold;
+  color: #00000096;
+}
+
+.agrupamento-img-p {
+  display: flex; /* Exibe itens em linha */
+  justify-content: center; /* Espaça itens igualmente */
+  gap: 20px; /* Espaçamento entre itens */
+}
+
+.sub-container-mini {
+  text-align: center; /* Centraliza texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Indica que é clicável */
+
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 6px;
+  width: 10rem;
+  height: 8rem;
+  padding: 10px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.sub-container-mini img{
+  width: 6rem ;
+  height: 4rem;
+}
+
+.sub-container-mini:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+/* fim da estilizaçao da 1a sessão*/
+
+/* Estilização do sub-container geral */
+.sub-container {
+  text-align: center; /* Centraliza texto */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 15px;
+  padding: 5px;
+  width: 16rem;
+  height: 19rem;
+  box-shadow: 2px 2px 2px 2px rgba(219, 209, 209, 0.836); /* Sombra ao redor */
+}
+
+.sub-container img{
+  place-content: center;
+  place-items: center;
+}
+.img-mac{
+  width: 18rem;
+  height: 16rem;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+.img-ipad{
+  width: 10rem;
+  height: 10rem;
+  margin-top: 40px;
+}
+.img-iphone{
+  width: 15rem;
+  height: 13rem;
+  margin-top: -13px;
+}
+#img-iphone{
+  width: 12em;
+  height: 11rem;
+  margin-top: 13px;
+}
+.img-airpods{
+  width: 9rem;
+  height: 8rem;
+  margin-top: 45px;
+}
+.img-applewatch{
+  width: 9rem;
+  height: 9rem;
+  margin-top: 45px;
+}
+
+/* Efeito de hover para sub-container */
+
+.sub-container-medios:hover {
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  transition: transform 0.5s;
+}
+
+.sub-container:hover {
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.sub-container-medio:hover {
+  transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.p-sessao-2,
+.p-sessao-4,
+.p-sessao-5,
+.p-sessao-7,
+.p-sessao-9 {
+  text-align: start;
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: #2c2c2c;
+  position: relative;
+  left: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sessao-2,
+.sessao-4 {
+  margin-bottom: 5rem;
+}
+
+.sessao-6 {
+  margin-top: 5rem;
+}
+
+.span-sessao-2,
+.span-sessao-4,
+.span-sessao-5,
+.span-sessao-7,
+.span-sessao-9 {
+  color: #00000096;
+}
+
+.modelo {
+  font-size: 1rem;
+  text-align: start;
+  position: relative;
+  left: 15px;
+  padding: 5px;
+  margin-bottom: -15px;
+}
+
+.modelo-negrito {
+  font-weight: bold;
+}
+
+.borda-lateral {
+  border: 3px solid #289094;
+  background-color: #289094;
+  width: 5px;
+  height: 1.5rem;
+  border-radius: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  left: 50px;
+}
+
+.botao-sessao-3,
+.botao-sessao-6,
+.botao-sessao-8 {
+  background-color: #2adae0; /* Cor de fundo do botão */
+  border: none; /* Remove borda do botão */
+  padding: 0.8rem 3.8rem; /* Espaçamento interno do botão */
+  border-radius: 9999px; /* Bordas totalmente arredondadas */
+  color: #fff; /* Cor do texto do botão */
+  font-weight: 500; /* Peso da fonte do botão */
+  font-size: 1rem; /* Tamanho da fonte do botão */
+  transition: all 0.2s; /* Animação suave em todas as propriedades */
+  position: relative;
+  left: 12rem;
+  cursor: pointer; /* Indica que é clicável */
+  bottom: 18px;
+}
+
+.botao-sessao-3:hover{
+  filter: brightness(0.8);
+}
+.botao-sessao-6:hover{
+  filter: brightness(0.8);
+}
+.botao-sessao-8:hover{
+  filter: brightness(0.8);
+}
+
+ .sub-container-medio{
+  text-align: center; /* Centraliza texto */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 15px;
+  padding: 30px;
+  width: 15rem;
+  height: 9rem;
+  box-shadow: 2px 2px 2px 2px rgba(219, 209, 209, 0.836); /* Sombra ao redor */  
+}
+
+.sub-container-medios {
+  text-align: center; /* Centraliza texto */
+  font-size: 1.1rem; /* Tamanho da fonte */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Indica que é clicável */
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  border-radius: 15px;
+  padding: 30px;
+  width: 15rem;
+  height: 10rem;
+  box-shadow: 2px 2px 2px 2px rgba(219, 209, 209, 0.836); /* Sombra ao redor */
+  margin-bottom: 130px;
+}
+
+.sub-container-medio img {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  width: 3.5rem;
+  height: 3rem;
+}
+
+.sub-container-medios img {
+  position: relative;
+  bottom: 20px;
+  right: 30px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  width: 7.5rem;
+  height: 6rem;
+}
+
+.sub-container-medio p {
+  display: block;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.sub-container-medios p {
+  display: block;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: relative;
+  bottom: 35px;
+}
+
+.scroll{
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1.5s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1.5s 
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Modal */
+dialog {
+  width: 550px;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+/* Fundo escurecido ao abrir o modal */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.modal-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 34px;
+  transition: 0.3s;
+  color: #555;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .benefit-card {
+      width: 90%;
+  }
+  dialog {
+      width: 90%;
+  }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ /* Footer */
+ footer {
+  background: #289094;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-section a:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  width: 90%;
+  max-width: 850px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+  transition: 0.3s;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+
+.lef-img {
+  max-width: 420px;
+  max-height: 800px;
+  border-radius: 10px;
+}
+.e-img {
+  max-width: 390px;
+  max-height: 800px;
+  border-radius: 10px;
+}
+
+.options {
+  margin-top: 15px;
+}
+
+.color-options{
+  margin-top: -8px;
+}
+
+.color-options button,
+.storage-options button {
+  background-color: #2c2c2c;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  color: #fff;
+  width: 4rem;
+  height: 2rem;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.storage-options {
+  position: relative;
+  bottom: 13.5px;
+  margin-left: 78px;
+  margin-top: 32px;
+}
+
+#storage{
+  position: relative;
+  top: 3px;
+}
+
+.color-options button:hover,
+.storage-options button:hover {
+  filter: brightness(0.8);
+}
+
+.right h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: -20px;
+}
+.right- h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: -20px;
+}
+.right h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: -20px;
+  
+}
+
+.right p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#product-description{
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.left h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.left- h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.right h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: -8px;
+  text-align: center;
+}
+
+.right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right ul li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right ul li::before {
+  content: "✔";
+  color: #0071e3;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.modelos-secao {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.modelos-secao h3 {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modelos-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modelos-buttons button,
+.add-cart {
+  padding: 10px 20px;
+  border: 1px solid #0071e3;
+  background-color: #0071e3;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.modelos-buttons button:hover,
+.add-cart:hover {
+  background-color: #005bb5;
+}
+
+
+.add-cart {
+  position: relative;
+  right: 115px;
+  margin-top: 5px;
+}
+.add-carts {
+  position: relative;
+  left: 110px;
+  padding: 10px 20px;
+  border: 1px solid #0071e3;
+  background-color: #0071e3;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-items: center;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modelos-secao {
+    text-align: left;
+  }
+
+  .modelos-buttons {
+    justify-content: flex-start;
+  }
+}
+
+.agrupamento-img-p-wrap {
+  display: flex; /* Exibe itens em linha */
+  flex-wrap: wrap;
+  justify-content: center; /* Espaça itens igualmente */
+  gap: 20px; /* Espaçamento entre itens */
+}
+
+
+.left- img {
+  width: 100%;
+  max-width: 950px;
+  border-radius: 10px;
+  
+}
+
+.options- {
+  margin-top: 5px;
+}
+
+.color-options- button {
+  background-color: #2c2c2c;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  color: #fff;
+  width: 4.5rem;
+  height: 2rem;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.storage-options- button{
+  background-color: #2c2c2c;
+  border-radius: 7px;
+  font-size: 0.7.1rem;
+  color: #fff;
+  width: 10rem;
+  height: 3.5rem;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#mmm button{
+  background-color: #2c2c2c;
+  border-radius: 7px;
+  font-size: 0.7.1rem;
+  color: #fff;
+  width: 4rem;
+  height: 2.5rem;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.color-options- button:hover,
+.storage-options- button:hover {
+  filter: brightness(0.8);
+}
+
+
+
+.right- p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.right- h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: -20px;  
+}
+
+.right- h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.right- ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right- ul li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right- ul li::before {
+  content: "✔";
+  color: #0071e3;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.modelos-secao- {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.modelos-secao- h3 {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modelos-buttons- {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  left: 20px;
+}
+
+.modelos-buttons- button,
+.add-cart- {
+  padding: 10px 20px;
+  border: 1px solid #0071e3;
+  background-color: #0071e3;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.modelos-buttons- button:hover,
+.add-cart-:hover {
+  background-color: #005bb5;
+}
+
+.add-cart- {
+  position: relative;
+  left: 90px;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+  }
+
+  .left- {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+  }
+
+  .right- {
+      flex: 1;
+      padding-left: 20px;
+  }
+
+  .options- {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .modelos-secao- {
+      text-align: left;
+  }
+
+  .modelos-buttons- {
+      justify-content: flex-start;
+  }
+}
+
+
+
+
+
+

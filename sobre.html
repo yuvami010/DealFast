@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        /* estilo global */
+        * {
+            font-weight: 300;
+            /* Define o peso da fonte */
+        }
+
+        /* estilo do corpo do programa */
+        body {
+            overflow-x: hidden;
+            /* Remove barra de rolagem horizontal */
+            background-color: #f5f7f8c5;
+            /* Define cor de fundo */
+            font-family: Arial, Helvetica, sans-serif;
+            /* Define a fonte do corpo */
+            color: black;
+            /* Define a cor do texto */
+        }
+
+        /* estilo do cabeçalho */
+        header {
+            position: fixed;
+            /* Fixa o cabeçalho no topo */
+            top: 0;
+            /* Alinha ao topo */
+            left: 0;
+            /* Alinha à esquerda */
+            display: flex;
+            /* Exibe itens em linha */
+            justify-content: space-around;
+            /* Espaça itens igualmente */
+            align-items: center;
+            /* Centraliza itens verticalmente */
+            z-index: 99;
+            /* Define a camada do cabeçalho */
+            background-color: #289094;
+            /* Define a cor de fundo do cabeçalho */
+            width: 100%;
+            /* Ocupa toda a largura da tela */
+            height: 5rem;
+            /* Define a altura do cabeçalho */
+        }
+
+        /* inicio do estilo da logo da loja */
+        .logo {
+            color: white;
+            /* Define a cor da logo */
+            font-size: 2.5rem;
+            /* Tamanho da fonte da logo */
+            text-decoration: none;
+            /* Remove o sublinhado da logo */
+        }
+
+        .logo span {
+            color: #2adae0;
+            /* Cor do span dentro da logo */
+        }
+
+        /* fim do estilo da logo da loja */
+
+        /* inicio do estilo do ícone do Hamburger */
+        .hamburger {
+            display: none;
+            /* Oculta o ícone por padrão */
+            position: absolute;
+            /* Posiciona o ícone */
+            cursor: pointer;
+            /* Muda o cursor para indicar clicável */
+            right: 5%;
+            /* Alinha à direita */
+            top: 50%;
+            /* Alinha verticalmente ao centro */
+            transform: translate(-5%, -50%);
+            /* Ajusta posição do ícone */
+            z-index: 2;
+            /* Define a camada do ícone */
+        }
+
+        .hamburger i {
+            font-size: 30px;
+            /* Tamanho do ícone */
+            color: #f2f5f7;
+            /* Cor do ícone */
+            transition: transform 0.7s ease;
+            /* Animação suave na transformação */
+        }
+
+        /* Animação do Ícone do Hamburger */
+        .hamburger.toggle i {
+            transform: rotate(90deg);
+            /* Rotaciona o ícone ao abrir */
+        }
+
+        /* fim do estilo do ícone do Hamburger */
+
+        /* inicio da estilização dos links do menu */
+        .nav-links {
+            display: flex;
+            /* Exibe links em linha */
+            align-items: center;
+            /* Centraliza links verticalmente */
+        }
+
+        .nav-links a::after {
+            content: "";
+            width: 0;
+            height: 3px;
+            display: block;
+            background-color: #fff;
+            transition: 0.8s;
+            margin: 0 auto;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links>i {
+            color: #fff;
+            font-size: 22px;
+            margin-left: 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            /* Remove sublinhado dos links */
+            margin-left: 1rem;
+            /* Espaçamento à esquerda */
+            color: #fff;
+            /* Cor dos links */
+            text-align: right;
+            /* Alinha texto à direita */
+            font-size: 1.2rem;
+            /* Tamanho da fonte dos links */
+        }
+
+        /* fim da estilização dos links do menu */
+
+        /* inicio da estilização dos botões do menu */
+        .btn button {
+            background-color: transparent;
+            /* Fundo transparente */
+            border: 1px solid #f2f5f7;
+            /* Borda dos botões */
+            border-radius: 2rem;
+            /* Bordas arredondadas */
+            padding: 0.4rem 0.6rem;
+            /* Espaçamento interno dos botões */
+            margin-left: 2vw;
+            /* Espaçamento à esquerda */
+            font-size: 1.1rem;
+            /* Tamanho da fonte dos botões */
+            cursor: pointer;
+            /* Indica que é clicável */
+            color: #fff;
+            /* Cor do texto do botão */
+        }
+
+        /* estilização dos botões do menu quando o mouse estiver por cima dos botões */
+        .btn button:hover {
+            color: #289094;
+            /* Cor do texto ao passar o mouse */
+            background-color: #f2f5f7;
+            /* Cor de fundo ao passar o mouse */
+            border: 1.5px solid #f2f5f7;
+            /* Ajusta borda ao passar o mouse */
+            transition: all ease-in-out 350ms;
+            /* Animação suave na transição */
+        }
+
+        /* fim da estilização dos botões do menu */
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
+
+        }
+
+        .hero-content {
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-weight: 550;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #00000096;
+        }
+
+        .bt {
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .hero img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        /* Seções */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-weight: bold;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #00000096;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            width: 310px;
+        }
+
+        .card i {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #289094;
+        }
+
+        .card h3 {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .card button {
+            background: #289094;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .card button:hover {
+            filter: brightness(0.8);
+        }
+
+        main {
+            margin-top: 100px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #289094;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+
+        .footer-section {
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-section h3 {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            filter: brightness(0.8);
+            cursor: pointer;
+        }
+
+        /* Modal */
+        /* Estilização dos Modais */
+        dialog {
+            border: none;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+        }
+
+        /* Fundo escurecido ao abrir o modal */
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Botão Fechar */
+        dialog button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 8px 12px;
+            border: none;
+            background: #dc3545;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        dialog button:hover {
+            background: #c82333;
+        }
+
+
+        .close-modal {
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Início do cabeçalho da página -->
+    <header>
+        <a href="#" class="logo">Deal<span>Fast</span></a>
+        <nav>
+            <div class="hamburger">
+                <i class="bi bi-list"></i> <!-- Ícone do menu hambúrguer (usado em dispositivos móveis) -->
+            </div>
+            <!-- Links de navegação -->
+            <ul class="nav-links">
+                <a href="inicio.html">Inicio</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre</a>
+                <!-- Botão do carrinho com ícone -->
+                <div class="btn">
+                    <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
+                    <!-- Botão do usuário com ícone -->
+                    <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim do cabeçalho da página -->
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sobre Nós</h1>
+                <p>A Deal Fast da oferece uma solução completa para nossos clientes: além de um serviço
+                    rápido e eficiente de reparação, também disponibiliza uma variedade de produtos tecnológicos das
+                    melhores marcas. Trabalhamos com uma seleção de dispositivos como iPhones, MacBooks e Acessórios
+                    Apple, proporcionando não apenas a compra, mas também serviços de manutenção ágeis. Nosso
+                    compromisso é entregar qualidade e conveniência, oferecendo produtos de alta performance e reparos
+                    rápidos, tudo em um só lugar.</p>
+            </div>
+            <img src="logo.jpg" alt="Imagem da empresa">
+        </section>
+
+        <!-- O que oferecemos -->
+        <section class="section oferecemos">
+            <h2>O que oferecemos</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="bi bi-box-seam"></i>
+                    <h3>Produtos</h3>
+                    <p>Produtos tecnológicos de qualidade e garantia.</p>
+                    <button onclick="openModal('modal-produtos')">Saiba Mais</button>
+                </div>
+                <div class="card">
+                    <i class="bi bi-tools"></i>
+                    <h3>Serviços</h3>
+                    <p>Serviço de reparação para nossos clientes.</p>
+                    <button onclick="openModal('modal-servicos')">Saiba Mais</button>
+                </div>
+                <div class="card">
+                    <i class="bi bi-credit-card"></i>
+                    <h3>Facilidade na Compra</h3>
+                    <p>Processo de compra simplificado e seguro.</p>
+                    <button onclick="openModal('modal-facilidade')">Saiba Mais</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa História -->
+        <section class="section historia">
+            <h2>Nossa História</h2>
+            <p>A Deal Fast surgiu com o objetivo de oferecer soluções rápidas e práticas para nossos clientes,
+                combinando produtos de qualidade com serviços de reparação ágeis. Com foco em marcas renomadas como
+                Apple, nossa missão é garantir uma experiência simples e eficiente, atendendo às necessidades de quem
+                busca tecnologia de ponta e um serviço confiável.</p>
+        </section>
+
+        <!-- Nossos Valores -->
+        <section class="section valores">
+            <h2>Nossos Valores</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="bi bi-shield-lock"></i>
+                    <h3>Qualidade</h3>
+                    <p>Garantia de produtos e serviços com alto padrão de qualidade.</p>
+                </div>
+                <div class="card">
+                    <i class="bi bi-shield-lock"></i>
+                    <h3>Confiança</h3>
+                    <p>Transparência e compromisso com nossos clientes.</p>
+                </div>
+                <div class="card">
+                    <i class="bi bi-person"></i>
+                    <h3>Atendimento</h3>
+                    <p>Atendimento personalizado e eficiente para cada cliente.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Nossos Serviços -->
+        <section class="section servicos">
+            <h2>Nossos Serviços</h2>
+            <p>Na Deal Fast, oferecemos serviços rápidos e confiáveis para garantir que seus dispositivos funcionem da
+                melhor forma. Além de uma seleção de produtos de marcas renomadas como Apple, também disponibilizamos
+                reparações ágeis e eficientes, desde iPhones até MacBooks e outros dispositivos eletrônicos. Nosso
+                compromisso é oferecer soluções práticas para atender às suas necessidades tecnológicas de forma simples
+                e eficaz</p>
+        </section>
+
+
+        <!-- Modal -->
+        <!-- Modal - Produtos -->
+        <dialog id="modal-produtos">
+            <h2>Nossos Produtos</h2>
+            <p>Oferecemos acessórios Apple de alta qualidade, como capas, carregadores e fones.</p>
+            <button onclick="closeModal('modal-produtos')">Fechar</button>
+        </dialog>
+
+        <!-- Modal - Serviços -->
+        <dialog id="modal-servicos">
+            <h2>Nossos Serviços</h2>
+            <p>Contamos com assistência técnica especializada e reparos rápidos via Deal Fas.</p>
+            <button onclick="closeModal('modal-servicos')">Fechar</button>
+        </dialog>
+
+        <!-- Modal - Facilidade na Compra -->
+        <dialog id="modal-facilidade">
+            <h2>Facilidade na Compra</h2>
+            <p>Pagamento simples e seguro via transferência ou dinheiro na entrega.</p>
+            <button onclick="closeModal('modal-facilidade')">Fechar</button>
+        </dialog>
+
+    </main>
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2025 Loja Virtual | Todos os direitos reservados.</p>
+    </footer>
+
+
+
+
+    <script>
+        function openModal(id) { document.getElementById(id).showModal(); }
+        function closeModal(id) { document.getElementById(id).close(); }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ipad</title>
+    <!-- Lin do css -->
+    <link rel="stylesheet" href="categoria.css">
+    <!-- Links para os icones boostrap offline-->
+    <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+    <!-- Link para o favicon -->
+    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+
+
+
+    <!-- Início do cabeçalho da página -->
+    <header>
+        <a href="#" class="logo">Deal<span>Fast</span></a>
+        <nav>
+            <div class="hamburger">
+                <i class="bi bi-list"></i> <!-- Ícone do menu hambúrguer (usado em dispositivos móveis) -->
+            </div>
+            <!-- Links de navegação -->
+            <ul class="nav-links">
+                <a href="inicio.html">Inicio </a>
+                <a href="produtos.html">Produtos </a>
+                <a href="serviços.html">Serviços</a>
+                <a href="sobre.html">Sobre</a>
+                <!-- Botão do carrinho com ícone -->
+                <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
+                <!-- Botão do usuário com ícone -->
+                <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
+                        style="font-size: 20px;"></i></button>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim do cabeçalho da página -->
+
+    <main>
+
+        <section class="scroll" class="sessao-1">
+            <div class="container-sessao-1">
+                <div class="texto">
+                    <p class="p-sessao-1"> Descubra o Ipad ideal para você. <br>
+                        <span class="span-sessao-1"> Seja para trabalho, estudo ou lazer, o Ipad combina potência e
+                            versatilidade. Explore os modelos disponíveis e leve sua criatividade a outro nível. </span>
+                    </p>
+                </div>
+                <div class="imagem">
+                    <!-- Imagem da seção -->
+                    <img src="img-ipad/img-sessao-1/ipad.png" alt="macbook">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="scroll" class="sessao-2">
+
+            <div class="borda-lateral"></div>
+            <p class="p-sessao-2">Modelos disponiveis.<span class="span-sessao-2"> É só escolher.</span></p>
+
+            <div class="agrupamento-img-p">
+
+
+                <div class="sub-container-mini" onclick="abrirModal('modalProt')">
+                    <p class="modelo-produto">Ipad Air</p>
+                    <img src="img-mac/img-sessao-2/macbook-air.png" alt="" srcset="">
+
+                    <div class="texto-botao">
+                        <p>Desde 1111 aoa</p>
+
+                        <button>comprar</button>
+                    </div>
+
+                </div>
+
+                <div class="sub-container-mini">
+                    <p class="modelo-produto">Ipad Pro</p>
+                    <img src="img-mac/img-sessao-2/macbook-pro.png" alt="" srcset="">
+
+                    <div class="texto-botao">
+                        <p>Desde 1111 aoa</p>
+
+                        <button>comprar</button>
+                    </div>
+                </div>
+
+                <div class="sub-container-mini">
+                    <p class="modelo-produto">Ipad</p>
+                    <img src="img-mac/img-sessao-2/imac.png" alt="" srcset="">
+
+                    <div class="texto-botao">
+                        <p>Desde 1111 aoa</p>
+
+                        <button>comprar</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="scroll" class="sessao-3">
+
+            <div class="borda-lateral"></div>
+            <p class="p-sessao-3">Ipad acessórios.<span class="span-sessao-3">Acessórios para Ipad em destaque.</span>
+            </p>
+
+            <div class="agrupamento-img-p">
+
+
+                <div class="sub-container-medio">
+                    <p class="modelo">Compre já</p>
+                    <p class="modelo modelo-negrito">MacBook Pro</p>
+                    <p class="modelo">Desde 700.000 aoa</p>
+                    <img src="img-mac/img-sessao-3/adaptador.png" alt="" srcset="">
+
+                    <div class="botao">
+
+
+                        <button>comprar</button>
+                    </div>
+
+                </div>
+
+                <div class="sub-container-medio">
+                    <p class="modelo">Compre já</p>
+                    <p class="modelo modelo-negrito">MacBook Pro</p>
+                    <p class="modelo">Desde 700.000 aoa</p>
+                    <img src="img-mac/img-sessao-3/keyboard.png" alt="" srcset="">
+
+                    <div class="botao">
+
+
+                        <button>comprar</button>
+                    </div>
+                </div>
+
+                <div class="sub-container-medio" onclick="abrirModal('modalPros')">
+                    <p class="modelo">Compre já</p>
+                    <p class="modelo modelo-negrito">MacBook Pro</p>
+                    <p class="modelo">Desde 700.000 aoa</p>
+                    <img src="img-mac/img-sessao-3/MXK63.png" alt="" srcset="">
+
+                    <div class="botao">
+
+
+                        <button>comprar</button>
+                    </div>
+                </div>
+
+                <div class="sub-container-medio" onclick="abrirModal('modalPro')">
+                    <p class="modelo">Compre já</p>
+                    <p class="modelo modelo-negrito">MacBook Pro</p>
+                    <p class="modelo">Desde 700.000 aoa</p>
+                    <img src="img-mac/img-sessao-3/trackpad.png" alt="" srcset="">
+
+                    <div class="botao">
+
+
+                        <button>comprar</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <dialog id="modalPro" data-img-folder="img-sessao-3">
+            <span class="close-modal" onclick="fecharModal('modalPro')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="img-mac/img-sessao-2/macbook-air.png" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="silver" style="background: silver;">Prata</button>
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Azul</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB (Prata)</h2>
+                    <h4 id="product-price"> 900.000kzs</h4>
+                    <p id="product-description">O iPhone 16 Pro redefine a experiência mobile com um design sofisticado,
+                        câmeras inovadoras e um desempenho incomparável.</p>
+
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Super Retina XDR 6.1" com ProMotion</li>
+                        <li>Chip A18 Pro com Neural Engine</li>
+                        <li>Sistema de Câmera Tripla de 48MP</li>
+                        <li>Modo Noturno e gravação em 8K</li>
+                        <li>Conectividade 5G e Wi-Fi 6E</li>
+                        <li>Bateria com até 28h de reprodução de vídeo</li>
+                    </ul>
+
+
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="modalPros" data-img-folder="img-sessao-3">
+            <span class="close-modal" onclick="fecharModal('modalPros')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="img-sessao-3/14.png" alt="iPhone 16 Pro">
+
+                </div>
+
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB (Prata)</h2>
+                    <h4 id="product-price"> 900.000kzs</h4>
+                    <p id="product-description">O iPhone 16 Pro redefine a experiência mobile com um design sofisticado,
+                        câmeras inovadoras e um desempenho incomparável.</p>
+
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Super Retina XDR 6.1" com ProMotion</li>
+                        <li>Chip A18 Pro com Neural Engine</li>
+                        <li>Sistema de Câmera Tripla de 48MP</li>
+                        <li>Modo Noturno e gravação em 8K</li>
+                        <li>Conectividade 5G e Wi-Fi 6E</li>
+                        <li>Bateria com até 28h de reprodução de vídeo</li>
+                    </ul>
+
+
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="modalProt" data-img-folder="img-sessao-3">
+            <span class="close-modal" onclick="fecharModal('modalProt')">×</span>
+            <div class="modal-content">
+                <div class="left-">
+                    <img src="img-mac/img-sessao-2/macbook-air.png" alt="iPhone 16 Pro">
+                    <div class="options-">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options-">
+                            <button data-color="silver" style="background: silver;">Prata</button>
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Azul</button>
+                        </div>
+
+                        <h3>Escolha as Configurações:</h3>
+                        <div class="storage-options-">
+                            <button>256 GB SSD/ 16 GB RAM/ GPU-8-CORE</button>
+                            <button>512 GB SSD/ 16 GB RAM/ GPU-10-CORE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-">
+                    <h2 id="product-title">iPhone 16 Pro</h2>
+                    <h4 id="product-price"> 900.000kzs</h4>
+                    <p id="product-description">O iPhone 16 Pro redefine a experiência mobile com um design sofisticado,
+                        câmeras inovadoras e um
+                        desempenho incomparável.</p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li> Tela Super Retina XDR 6.1" com ProMotion</li>
+                        <li> Chip A18 Pro com Neural Engine</li>
+                        <li> Sistema de Câmera Tripla de 48MP</li>
+                        <li> Modo Noturno e gravação em 8K</li>
+
+                    </ul>
+
+                    <div class="modelos-secao-">
+                        <h3>Polegadas</h3>
+                        <div class="modelos-buttons-">
+                            <button onclick="trocarModal('modalProt', 'modalBasico')">13 Polegadas</button>
+                            <button>13 Polegadas</button>
+                        </div>
+                    </div>
+
+                    <button class="add-cart-">Adicionar ao Carrinho</button>
+                </div>
+        </dialog>
+
+        <dialog id="modalBasico" data-img-folder="img-sessao-3">
+            <span class="close-modal" onclick="fecharModal('modalBasico')">×</span>
+            <div class="modal-content">
+                <div class="left-">
+                    <img src="img-mac/img-sessao-2/macbook-air.png" alt="iPhone 16 Pro">
+                    <div class="options-">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options-">
+                            <button data-color="silver" style="background: silver;">Prata</button>
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Azul</button>
+                        </div>
+
+                        <h3>Escolha as Configurações:</h3>
+                        <div class="storage-options-">
+
+                            <button>256 GB SSD/ 16 GB RAM/ GPU-8-CORE</button>
+                            <button>512 GB SSD/ 16 GB RAM/ GPU-10-CORE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-">
+                    <h2 id="product-title">iPhone 16 Pro</h2>
+                    <h4 id="product-price"> 900.000kzs</h4>
+                    <p id="product-description">O iPhone 16 Pro redefine a experiência mobile com um design sofisticado,
+                        câmeras inovadoras e um
+                        desempenho incomparável.</p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li> Tela Super Retina XDR 6.1" com ProMotion</li>
+                        <li> Chip A18 Pro com Neural Engine</li>
+                        <li> Sistema de Câmera Tripla de 48MP</li>
+                        <li> Modo Noturno e gravação em 8K</li>
+
+
+                    </ul>
+
+                    <div class="modelos-secao-">
+                        <h3>Polegadas</h3>
+                        <div class="modelos-buttons-">
+                            <button>13 Polegadas</button>
+                            <button onclick="trocarModal('modalBasico', 'modalProt')">16 Polegadas</button>
+                        </div>
+                    </div>
+
+                    <button class="add-cart-">Adicionar ao Carrinho</button>
+                </div>
+        </dialog>
+        </div>
+
+    </main>
+</body>
+<script src="iphone.js"></script>
+
+</html>

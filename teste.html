@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Pedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+
+        dialog {
+            width: 90%;
+            max-width: 500px;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.3s ease-in-out;
+            overflow-y: auto;
+        }
+
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #555;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #000;
+        }
+
+        .container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .display-flex {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+        }
+
+        select{
+            width: 220px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input,
+        
+        textarea {
+            width: 200px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .botao {
+            margin-top: 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .botao:hover {
+            background: #0056b3;
+        }
+
+        .obs {
+            font-size: 13px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="abrirModal('modal1')">abrir</button>
+
+    <dialog id="modal1">
+        <span class="close-modal" onclick="fecharModal('modal1')">×</span>
+        <h2>Finalizar Pedido</h2>
+        <form method="post">
+
+            <div class="flex">
+                <div class="display-flex">
+                    <label>Nome Completo</label>
+                    <input type="text" name="nome" required>
+                    <label>Modelo do Dispositivo</label>
+                    <select name="forma_entrega" required onchange="mostrarEndereco(this.value)">
+                        <option value="">-- Selecione --</option>
+                        <option value="Iphone 15">Iphone 15</option>
+                        <option value="Iphone 16">Iphone 16</option>
+                    </select>
+                </div>
+
+
+                <div class="display-flex">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+
+                    <label>Problema</label>
+                    <input type="text" name="problema" required>
+                </div>
+
+                <div class="display-flex">
+                    <label>Local da reparação</label>
+                    <select name="forma_entrega" required>
+                        <option value="">-- Selecione --</option>
+                        <option value="Ao domicílio">Ao domicílio</option>
+                        <option value="Na loja">Na loja</option>
+                    </select>
+
+                    <label>Método de Pagamento</label>
+                    <select name="metodo_pagamento" required>
+                        <option value="">-- Selecione --</option>
+                        <option value="Transferência Bancária">Transferência Bancária</option>
+                        <option value="Pagamento na Entrega">Pagamento na Entrega</option>
+                    </select>
+
+                </div>
+
+                <div class="display-flex">
+
+                    <label>Endereço do local</label>
+                    <input type="text">
+
+                    <label>Total</label>
+                    <input type="text" name="problema" required>
+                </div>
+            </div>
+
+
+            <button type="submit" class="botao" onclick="window.location.href='fatura.php';">Confirmar Pedido</button>
+            <p class="obs">Após confirmar, será gerada a fatura com instruções de pagamento.</p>
+        </form>
+    </dialog>
+
+    <script>
+        function abrirModal(id) { document.getElementById(id).showModal(); }
+        function fecharModal(id) { document.getElementById(id).close(); }
+        function trocarModal(fechar, abrir) { fecharModal(fechar); abrirModal(abrir); }
+
+
+
+    </script>
+
+</body>
+
+</html>

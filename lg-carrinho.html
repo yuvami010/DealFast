@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="lg-carrinho.css">
+     <!-- Links para os icones boostrap offline-->
+     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="favicon/ImagemWhatsApp.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Deal<span>Fast</span></a>
+        <nav>
+            <div class="hamburger">
+                <i class="bi bi-list"></i> <!-- Ícone do menu hambúrguer (usado em dispositivos móveis) -->
+            </div>
+            <!-- Links de navegação -->
+            <ul class="nav-links">
+                <a href="lg-inicio.html">Inicio </a>
+                <a href="lg-produtos.html">Produtos </a>
+                <a href="lg-serviços.html">Serviços</a>
+                <a href="lg-sobre.html">Sobre</a>
+                <!-- Botão do carrinho com ícone -->
+                <div class="btn">
+
+                    <!-- Botão do usuário com ícone -->
+                    <button onclick="window.location.href='sair.php';"> Sair da Conta <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="scroll sessao-1">
+
+            <h2> Carrinho de Compras</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th class="table-head-item first-col">Produto</th>
+                        <th class="table-head-item second-col">Preço</th>
+                        <th class="table-head-item third-col">Quantidade</th>
+                        <th class="table-head-item third-col">SubTotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="card-product">
+                        <td class="product-identification">
+                            <button class="remove-product-button" type="button">X</button>
+                            <img class="card-product-image" src="img-mac/img-sessao-2/macbook-air.png" alt="">
+                            <strong class="card-product-title">MacBook air M3</strong>
+                        </td>
+                        <td>
+                            <span class="card-product-price">200.000 AOA</span>
+                        </td>
+                        <td>
+                            <input class="product-qtd-input" type="number" value="1" min="0">
+                        </td>
+                        <td>
+                            <span class="product-subtotal">200.000 AOA</span>
+                        </td>
+                    </tr>
+                    <tr class="card-product">
+                        <td class="product-identification">
+                            <button class="remove-product-button" type="button">X</button>
+                            <img class="card-product-image" src="img-mac/img-sessao-2/macbook-pro.png" alt="">
+                            <strong class="card-product-title">MacBook pro M3</strong>
+                        </td>
+                        <td>
+                            <span class="card-product-price">100.000 AOA</span>
+                        </td>
+                        <td>
+                            <input class="product-qtd-input" type="number" value="1" min="0">
+                        </td>
+                        <td>
+                            <span class="product-subtotal">100.000 AOA</span>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="cart-total-container">
+
+                            <button class="purchaseButton" type="button"
+                                onclick="window.location.href='produtos.html';">Continuar Comprado</button>
+
+
+                            <div class="baixo">
+
+                                <strong>Total <span id="total-value">300.000 AOA</span> </strong>
+
+                            </div>
+                            <button class="abrir_modal purchase-button" type="button" data-modal="modal1">Finalizar
+                                Compra</button>
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </section>
+    </main>
+
+    <script src="lg-carrinho.js"></script>
+</body>
+
+</html>
