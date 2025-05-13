@@ -10,14 +10,10 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
-
-
-
-
     <!-- Início do cabeçalho da página -->
     <header>
         <a href="#" class="logo">Deal<span>Fast</span></a>
@@ -32,9 +28,16 @@
                 <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
-                <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
-                <!-- Botão do usuário com ícone -->
-                <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person" style="font-size: 20px;"></i></button>
+                <div class="btn">
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
+                    <!-- Botão do usuário com ícone -->
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -46,7 +49,7 @@
 
             <div class="container-sessao-1">
                 <div class="texto">
-                    <p class="p-sessao-1"> Compre um Mac. <br>
+                    <p class="p-sessao-1"> Compre um Mac.
                         <span class="span-sessao-1"> A linha de Macs oferece um desempenho incomparável, design inovador
                             e
                             uma experiência de uso perfeita.
@@ -55,7 +58,7 @@
                 </div>
                 <div class="imagem">
                     <!-- Imagem da seção -->
-                    <img src="img-mac/img-sessao-1/mac-removebg-preview.png" alt="macbook">
+                    <img src="categoria/mac.png" alt="macbook">
                 </div>
             </div>
         </section>
@@ -68,9 +71,9 @@
             <div class="agrupamento-img-p">
 
                 
-                    <div class="sub-container-mini">
-                        <p class="modelo-produto">MacBook Air</p>
-                        <img src="img-mac/img-sessao-2/macbook-air.png" alt="" srcset="">
+                    <div class="sub-container-mini" onclick="abrirModal('MacBookAir13')">
+                        <p class="modelo-produto">MacBook Air M4</p>
+                        <img src="mac/Air/blue.png" alt="" srcset="">
                         
                         <div class="texto-botao">
                             <p>Desde 1111 aoa</p>
@@ -81,8 +84,8 @@
                     </div>
                 
                     <div class="sub-container-mini">
-                        <p class="modelo-produto">MacBook Pro</p>
-                        <img src="img-mac/img-sessao-2/macbook-pro.png" alt="" srcset="">
+                        <p class="modelo-produto">MacBook Pro M4</p>
+                        <img src="mac/Pro/black.png" alt="" srcset="">
                         
                         <div class="texto-botao">
                             <p>Desde 1111 aoa</p>
@@ -172,6 +175,58 @@
 
 
     </main>
+<section class="modais">
+
+    <dialog id="MacBookAir13" data-img-folder="mac/Air/" data-default-color="blue"
+    data-default-storage="256GB SSD 16 GB RAM GPU-8-CORE">
+    <span class="close-modal" onclick="fecharModal('MacBookAir13')">×</span>
+    <div class="modal-content">
+        <div class="left">
+            <img id="product-image" class="lef-img" src="mac/Air/" alt="iPhone 16 Pro">
+            <div class="options">
+                <h3>Cores Disponíveis:</h3>
+                <div class="color-options">
+                    <button data-color="black" style="background: black; color: white;">Preto</button>
+                    <button data-color="blue" style="background: blue;">Azul</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+            <h4 id="product-price"></h4>
+            <p id="product-description"></p>
+            <h3>Especificações:</h3>
+            <ul>
+                <li>Tela Liquid Retina de 13,6" ou 15,3"</li>
+                <li>Chip M4 com CPU de 8 núcleos</li>
+                <li>Compatível com até dois monitores externos</li>
+                <li>Touch ID e Magic Keyboard retroiluminado</li>
+            </ul>
+            <h3 id="storage">Escolha o Armazenamento:</h3>
+            <div class="storage-options armazenamento">
+                <button data-storage="256GB SSD 16 GB RAM GPU-8-CORE">256 GB SSD 16 GB RAM GPU-8-CORE</button>
+                <button data-storage="512GB SSD 16 GB RAM GPU-8-CORE">512 GB SSD 16 GB RAM GPU-10-CORE</button>
+            </div>
+
+            <h3 id="polegadas">Polegadas</h3>
+            <div class="modelos-buttons">
+                <button>13 Polegadas</button>
+                <button onclick="trocarModal('MacBookAir13', 'MacBookAir16')">16 Polegadas</button>
+            </div>
+
+            <button class="add-cart">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+</dialog>
+
+</section>
+
 </body>
-<script src="categoria.js"></script>
+<script src="scroll.js"></script>
+<script src="modal-produtos-mac.js"></script>
+<script src="modal.js"></script>
+<script src="contador-carrinho.js"></script>
+<script src="add-cart.pag.produtos.js"></script>
+<script src="add-modal.js"></script>
+<script src="rediricionamento.js"></script>
 </html>

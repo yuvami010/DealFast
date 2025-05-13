@@ -10,7 +10,7 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -32,10 +32,16 @@
                 <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
-                <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
-                <!-- Botão do usuário com ícone -->
-                <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
-                        style="font-size: 20px;"></i></button>
+                <div class="btn">
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
+                    <!-- Botão do usuário com ícone -->
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -47,14 +53,14 @@
 
             <div class="container-sessao-1">
                 <div class="texto">
-                    <p class="p-sessao-1"> Escolha o seu Iphone. <br>
-                        <span class="span-sessao-1">Desempenho, câmeras avançadas e a experiência Apple na palma da sua
-                            mão. Descubra os modelos mais recentes e encontre o Iphone ideal para você.</span>
+                    <p class="p-sessao-1"> Escolha o seu Iphone.
+                        <span class="span-sessao-1">Desempenho, câmeras avançadas e a experiência Apple na sua
+                            mão. Descubra os modelos e encontre o Iphone ideal para você.</span>
                     </p>
                 </div>
                 <div class="imagem">
                     <!-- Imagem da seção -->
-                    <img src="img-iphone/img-sessao-1/iphone.png" alt="macbook">
+                    <img src="categoria/iphone.png" alt="macbook">
                 </div>
             </div>
         </section>
@@ -69,9 +75,9 @@
 
 
                 <div class="sub-container-mini">
-                    <div class="click" onclick="abrirModal('modal16ProMax')">
+                    <div class="click" onclick="abrirModal('Iphone16ProMax')">
                         <p class="modelo-produto">Iphone 16 Pro Max </p>
-                        <img src="img-mac/img-sessao-2/macbook-air.png" alt="" srcset="">
+                        <img src="iphones/16ProMax/black.png" alt="" srcset="">
                     </div>
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -83,9 +89,9 @@
 
 
 
-                <div class="sub-container-mini" onclick="abrirModal('modal16Plus')">
-                    <p class="modelo-produto"> Iphone 16 Plus</p>
-                    <img src="img-mac/img-sessao-2/macbook-pro.png" alt="" srcset="">
+                <div class="sub-container-mini" onclick="abrirModal('Iphone16Pro')">
+                    <p class="modelo-produto"> Iphone 16 Pro</p>
+                    <img src="iphones/16Pro/brown.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -96,9 +102,9 @@
 
 
 
-                <div class="sub-container-mini" onclick="abrirModal('modal16E')">
+                <div class="sub-container-mini" onclick="abrirModal('Iphone16e')">
                     <p class="modelo-produto">Iphone 16e</p>
-                    <img src="img-mac/img-sessao-2/imac.png" alt="" srcset="">
+                    <img src="iphones/16E/white.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -109,9 +115,9 @@
 
 
 
-                <div class="sub-container-mini" onclick="abrirModal('modal16')">
+                <div class="sub-container-mini" onclick="abrirModal('Iphone16')">
                     <p class="modelo-produto">Iphone 16</p>
-                    <img src="img-mac/img-sessao-2/imac.png" alt="" srcset="">
+                    <img src="iphones/16/black.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -122,22 +128,22 @@
 
 
 
-                <div class="sub-container-mini" onclick="abrirModal('modal15Plus')">
+                <div class="sub-container-mini" onclick="abrirModal('Iphone15Plus')" data-id="Iphone15Plus">
                     <p class="modelo-produto"> Iphone 15 Plus</p>
-                    <img src="img-mac/img-sessao-2/imac.png" alt="" srcset="">
+                    <img src="iphones/15Plus/green.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
 
-                        <button>comprar</button>
+                        <button class="bt-carrinho">comprar</button>
                     </div>
                 </div>
 
 
 
-                <div class="sub-container-mini" onclick="abrirModal('modal15')">
+                <div class="sub-container-mini" onclick="abrirModal('Iphone15')">
                     <p class="modelo-produto">Iphone 15</p>
-                    <img src="img-mac/img-sessao-2/imac.png" alt="" srcset="">
+                    <img src="iphones/15/pink.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -216,415 +222,135 @@
                         </div>
 
                     </div>
-                </section>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Modais  da  2a sessão -->
-
-    <!-- Modal 16 Pro Max -->
-    <dialog id="modal16ProMax" data-img-folder="img-sessao-3" data-default-color="dourado" data-default-storage="128GB">
-        <span class="close-modal" onclick="fecharModal('modal16ProMax')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img id="product-image" class="lef-img" src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-                <div class="options">
-                    <h3>Cores Disponíveis:</h3>
-                    <div class="color-options">
-                        <button data-color="gold" style="background: gold;">Dourado</button>
-                        <button data-color="black" style="background: black; color: white;">Preto</button>
-                        <button data-color="blue" style="background: blue;">Azul</button>
+    <section class="modais">
+        <dialog id="Iphone16e" data-img-folder="iphones/16E/" data-default-color="white" data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('Iphone16e')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="e-img" src="img-sessao-3/14.png" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="white" style="background: white; color: black;">Branco</button>
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16e ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li> Tela Retina HD 6.1"</li>
+                        <li> Chip A18 Pro com Neural Engine</li>
+                        <li> Câmera traseira de 12MP com Modo Retrato</li>
+                        <li> Desbloqueio com Face ID</li>
+                    </ul>
 
-            <div class="right">
-                <h2 id="product-title">iPhone 16 Pro 64GB (Prata)</h2>
-                <h4 id="product-price"> 900.000kzs</h4>
-                <p id="product-description">O iPhone 16 Pro redefine a experiência mobile com um design sofisticado,
-                    câmeras inovadoras e um desempenho incomparável.</p>
-
-                <h3>Especificações:</h3>
-                <ul>
-                    <li>Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li>Chip A18 Pro com Neural Engine</li>
-                    <li>Sistema de Câmera Tripla de 48MP</li>
-                    <li>Modo Noturno e gravação em 8K</li>
-                    <li>Conectividade 5G e Wi-Fi 6E</li>
-                    <li>Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-                <h3 id="storage">Escolha o Armazenamento:</h3>
-                <div class="storage-options">
-                    <button data-storage="64GB">64GB</button>
-                    <button data-storage="128GB">128GB</button>
-                    <button data-storage="256GB">256GB</button>
-                </div>
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-    <dialog id="modal16" data-img-folder="img-sessao-3" data-default-color="prata" data-default-storage="256GB">
-        <span class="close-modal" onclick="fecharModal('modal16')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img id="product-image" class="lef-img" src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-                <div class="options">
-                    <h3>Cores Disponíveis:</h3>
-                    <div class="color-options">
-                        <button data-color="gold" style="background: gold;">Dourado</button>
-                        <button data-color="black" style="background: black; color: white;">Preto</button>
-                        <button data-color="blue" style="background: blue;">Azul</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right">
-                <h2 id="product-title">iPhone 16 Pro 64GB (Prata)</h2>
-                <h4 id="product-price"> 900.000kzs</h4>
-                <p id="product-description">O iPhone 16 Pro redefine a experiência mobile com um design sofisticado,
-                    câmeras inovadoras e um desempenho incomparável.</p>
-
-                <h3>Especificações:</h3>
-                <ul>
-                    <li>Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li>Chip A18 Pro com Neural Engine</li>
-                    <li>Sistema de Câmera Tripla de 48MP</li>
-                    <li>Modo Noturno e gravação em 8K</li>
-                    <li>Conectividade 5G e Wi-Fi 6E</li>
-                    <li>Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-                <h3 id="storage">Escolha o Armazenamento:</h3>
-                <div class="storage-options">
-                    <button data-storage="64GB">64GB</button>
-                    <button data-storage="128GB">128GB</button>
-                    <button data-storage="256GB">256GB</button>
-                </div>
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-    <!-- Termino Modal 16 Pro Max -->
-
-    <!-- Modal 16 Pro Max -->
-
-    <dialog id="modal16Plus">
-        <span class="close-modal" onclick="fecharModal('modal16Plus')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-                <div class="options">
-                    <h3>Cores Disponíveis:</h3>
-                    <div class="color-options">
-                        <button style="background: silver;">Prata</button>
-                        <button style="background: black; color: white;">Preto</button>
-                        <button style="background: blue;">Azul</button>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
                     </div>
 
+                    <button class="add-cart">Adicionar ao Carrinho</button>
                 </div>
             </div>
+        </dialog>
 
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-                <h3>Escolha o Armazenamento:</h3>
-                <div class="storage-options">
-                    <button>64GB</button>
-                    <button>128GB</button>
-                    <button>256GB</button>
+        <dialog id="Iphone15" data-img-folder="iphones/15/" data-default-color="pink" data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('Iphone15')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="iphones/15/pink.png" alt="iPhone 15">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="pink" style="background: pink;">Branco</button>
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Azul</button>
+                        </div>
+                    </div>
                 </div>
 
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
+                <div class="right">
+                    <h2 id="product-title">iPhone 15 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description">
+                        .
+                    </p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Super Retina XDR de 6,1"</li>
+                        <li>Chip A16 Bionic com 5 núcleos de GPU</li>
+                        <li>Câmera principal de 48MP com modo retrato</li>
+                        <li>Face ID e bateria para o dia todo</li>
+                    </ul>
 
-    <!-- Termino Modal 16 Pro Max -->
-
-    <!-- Modal 16 Pro Max -->
-
-    <dialog id="modal16E">
-        <span class="close-modal" onclick="fecharModal('modal16E')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-                <div class="options">
-                    <h3>Cores Disponíveis:</h3>
-                    <div class="color-options">
-                        <button style="background: silver;">Prata</button>
-                        <button style="background: black; color: white;">Preto</button>
-                        <button style="background: blue;">Azul</button>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
                     </div>
 
+                    <button class="add-cart">Adicionar ao Carrinho</button>
                 </div>
             </div>
+        </dialog>
 
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-                <h3>Escolha o Armazenamento:</h3>
-                <div class="storage-options">
-                    <button>64GB</button>
-                    <button>128GB</button>
-                    <button>256GB</button>
-                </div>
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-    <!-- Termino Modal 16 Pro Max -->
-
-    <!-- Modal 16 Pro Max -->
-
-    
-
-    <!-- Termino Modal 16 Pro Max -->
-
-    <!-- Modal 16 Pro Max -->
-
-    <dialog id="modal15Plus">
-        <span class="close-modal" onclick="fecharModal('modal15Plus')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-                <div class="options">
-                    <h3>Cores Disponíveis:</h3>
-                    <div class="color-options">
-                        <button style="background: silver;">Prata</button>
-                        <button style="background: black; color: white;">Preto</button>
-                        <button style="background: blue;">Azul</button>
+        <dialog id="Iphone16Pro" data-img-folder="iphones/16Pro/" data-default-color="black"
+            data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('Iphone16Pro')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="img-sessao-3/14.png" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="brown" style="background: brown;">Deserto</button>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-                <h3>Escolha o Armazenamento:</h3>
-                <div class="storage-options">
-                    <button>64GB</button>
-                    <button>128GB</button>
-                    <button>256GB</button>
-                </div>
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-    <!-- Termino Modal 16 Pro Max -->
-
-    <!-- Modal 16 Pro Max -->
-
-    <dialog id="modal15">
-        <span class="close-modal" onclick="fecharModal('modal15')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-                <div class="options">
-                    <h3>Cores Disponíveis:</h3>
-                    <div class="color-options">
-                        <button style="background: silver;">Prata</button>
-                        <button style="background: black; color: white;">Preto</button>
-                        <button style="background: blue;">Azul</button>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Super Retina XDR 6.1" com ProMotion</li>
+                        <li>Chip A18 Pro com Neural Engine</li>
+                        <li>Sistema de Câmera Tripla de 48MP</li>
+                        <li>Modo Noturno e gravação em 8K</li>
+                        <li>Face ID</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
                     </div>
-
+                    <button class="add-cart">Adicionar ao Carrinho</button>
                 </div>
             </div>
-
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-                <h3>Escolha o Armazenamento:</h3>
-                <div class="storage-options">
-                    <button>64GB</button>
-                    <button>128GB</button>
-                    <button>256GB</button>
-                </div>
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-
-    <!-- Termino dos modais da  2a sessão -->
-
-    <!-- Modais da  3a sessão -->
-
-    <dialog id="modalAcumulador">
-        <span class="close-modal" onclick="fecharModal('modalAcumulador')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-
-            </div>
-
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="modalFones">
-        <span class="close-modal" onclick="fecharModal('modalFones')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-
-            </div>
-
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="modalCarregador-Dobravel">
-        <span class="close-modal" onclick="fecharModal('modalCarregador-Dobravel')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-
-            </div>
-
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-
-    <dialog id="modalAdaptador">
-        <span class="close-modal" onclick="fecharModal('modalAdaptador')">×</span>
-        <div class="modal-content">
-            <div class="left">
-                <img src="img-sessao-3/14.png" alt="iPhone 16 Pro">
-
-            </div>
-
-            <div class="right">
-                <h2>iPhone 16 Pro</h2>
-                <p>O iPhone 16 Pro redefine a experiência mobile com um design sofisticado, câmeras inovadoras e um
-                    desempenho incomparável.</p>
-                <h3>Especificações:</h3>
-                <ul>
-                    <li> Tela Super Retina XDR 6.1" com ProMotion</li>
-                    <li> Chip A18 Pro com Neural Engine</li>
-                    <li> Sistema de Câmera Tripla de 48MP</li>
-                    <li> Modo Noturno e gravação em 8K</li>
-                    <li> Conectividade 5G e Wi-Fi 6E</li>
-                    <li> Bateria com até 28h de reprodução de vídeo</li>
-                </ul>
-
-
-
-                <button class="add-cart">Adicionar ao Carrinho</button>
-            </div>
-        </div>
-    </dialog>
-    <!-- Termino dos modais da  3a sessão -->
+        </dialog>
+    </section>
 
 </body>
-<script src="iphone.js"></script>
+<script src="scroll.js"></script>
+<script src="modal.js"></script>
+<script src="modal-produtos-iphone.js"></script>
+<script src="contador-carrinho.js"></script>
+<script src="add-cart.pag.produtos.js"></script>
+<script src="rediricionamento.js"></script>
+<script src="add-modal.js"></script>
 
 </html>

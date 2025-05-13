@@ -127,7 +127,7 @@ header {
 }
 
 table{
-  width: 85%;
+  width: 90%;
   border-collapse: collapse;
 }
 
@@ -146,7 +146,7 @@ table{
 
 .second-col,
 .third-col {
-  width: 15%;
+  width: 13%;
 }
 
 .card-product td {
@@ -159,8 +159,8 @@ table{
   align-items: center;
 }
 .card-product-image {
-  width: 100px;
-  height: 70px;
+  width: 140px;
+  height: 100px;
 }
 .card-product-title {
   margin-left: 16px;
@@ -181,7 +181,7 @@ table{
 
 .remove-product-button {
   margin-left: 15px;
-  background-color: rgb(255, 145, 0);
+  background-color: red;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -342,12 +342,12 @@ dialog p{
   filter: brightness(0.8);
 }
 
-#btnEntrar {
+#btnEntrarCarrinho {
   background-color: #289094;
   color: white;
 }
 
-#btnCriarConta {
+#btnCriarContaCarrinho {
   background-color: #2ae09a;
   color: white;
 }
@@ -374,4 +374,25 @@ dialog p{
 .explore-button:hover {
   filter: brightness(0.8);
   cursor: pointer;
+}
+
+/* Estilo do botão do carrinho */
+.carrinho-com-contador {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo do contador */
+#contador-carrinho {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #289094;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none; /* Só aparece se tiver itens */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px white;
 }

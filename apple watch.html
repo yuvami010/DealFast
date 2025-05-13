@@ -10,7 +10,7 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -32,10 +32,16 @@
                 <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
-                <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
-                <!-- Botão do usuário com ícone -->
-                <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
-                        style="font-size: 20px;"></i></button>
+                <div class="btn">
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
+                    <!-- Botão do usuário com ícone -->
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -171,6 +177,7 @@
 
     </main>
 </body>
-<script src="categoria.js"></script>
-
+<script src="contador-carrinho.js"></script>
+<script src="scroll.js"></script>
+<script src="rediricionamento.js"></script>
 </html>

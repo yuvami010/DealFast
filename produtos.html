@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="produtos.css">
   <!-- Ícones do Bootstrap -->
   <link rel="stylesheet" href="font/bootstrap-icons.min.css">
-  <link rel="shortcut icon" href="favicon/ImagemWhatsApp.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -17,20 +17,24 @@
     <a href="#" class="logo">Deal<span>Fast</span></a>
     <nav>
       <div class="hamburger">
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list"></i> <!-- Ícone do menu hambúrguer (usado em dispositivos móveis) -->
       </div>
+      <!-- Links de navegação -->
       <ul class="nav-links">
-        <a href="inicio.html">Início</a>
+        <a href="inicio.html">Inicio </a>
+        <a href="produtos.html">Produtos </a>
         <a href="serviços.html">Serviços</a>
         <a href="sobre.html">Sobre</a>
-
+        <!-- Botão do carrinho com ícone -->
         <div class="btn">
-          <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
-          <button onclick="window.location.href='entrar.html'">
-            Usuário <i class="bi bi-person" style="font-size: 20px;"></i>
+          <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+            Carrinho
+            <i class="bi bi-cart"></i>
+            <span id="contador-carrinho">0</span>
           </button>
+          <!-- Botão do usuário com ícone -->
+          <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person" style="font-size: 20px;"></i></button>
         </div>
-
       </ul>
     </nav>
   </header>
@@ -64,7 +68,7 @@
           <a href="teste.html">
             <img src="img-mac/img-sessao-2/macbook-air.png" alt="MacBook Pro">
             <p class="modelo modelo-negrito">MacBook Pro</p>
-           
+
           </a>
           <div class="p-bt">
             <p>700.000 AOA</p>
@@ -78,7 +82,7 @@
           <a href="produto-detalhe.html">
             <img src="img-mac/img-sessao-2/macbook-air.png" alt="iPad Pro">
             <p class="modelo modelo-negrito">iPad Pro</p>
-           
+
           </a>
           <div class="p-bt">
             <p>600.000 AOA</p>
@@ -92,7 +96,7 @@
           <a href="produto-detalhe.html">
             <img src="img-mac/img-sessao-2/macbook-pro.png" alt="iPhone 14">
             <p class="modelo modelo-negrito">iPhone 14</p>
-            
+
           </a>
           <div class="p-bt">
             <p>800.000 AOA</p>
@@ -105,7 +109,7 @@
           <a href="produto-detalhe.html">
             <img src="img-mac/img-sessao-2/macbook-pro.png" alt="iPhone 14">
             <p class="modelo modelo-negrito">iPhone 14</p>
-            
+
           </a>
           <div class="p-bt">
             <p>800.000 AOA</p>
@@ -119,7 +123,12 @@
     </section>
   </main>
 
-  <script src="produtos.js"></script>
 </body>
+<script src="scroll.js"></script>
+<script src="contador-carrinho.js"></script>
+<script src="modal.js"></script>
+<script src="rediricionamento.js"></script>
+<script src="add-cart.pag.produtos.js"></script>
+<script src="filtro-categoria.js"></script>
 
 </html>

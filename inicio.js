@@ -36,10 +36,25 @@ const productPrices = {
         '256GB': '980.000kzs',
         '512GB': '1.200.000kzs'
     },
-    IpadAir: {
+    IpadAir13: {
         '128GB': '850.000kzs',
         '256GB': '980.000kzs',
         '512GB': '1.200.000kzs'
+    },
+    IpadAir16: {
+        '128GB': '850.000kzs',
+        '256GB': '980.000kzs',
+        '512GB': '1.200.000kzs'
+    },
+    IpadPro13: {
+        '128GB': '950.000kzs',
+        '256GB': '1.080.000kzs',
+        '512GB': '1.420.000kzs'
+    },
+    IpadPro16: {
+        '128GB': '955.000kzs',
+        '256GB': '1.085.000kzs',
+        '512GB': '1.450.000kzs'
     },
     Iphone16e: {
         '128GB': '800.000kzs',
@@ -50,6 +65,22 @@ const productPrices = {
         '128GB': '870.000kzs',
         '256GB': '900.000kzs',
         '512GB': '1.400.000kzs'
+    },
+    MacBookAir13: {
+        '256GB SSD 16 GB RAM GPU-8-CORE': '1.900.000kzs',
+        '512GB SSD 16 GB RAM GPU-8-CORE': '2.400.000kzs'
+    },
+    MacBookAir16: {
+        '256GB SSD 16 GB RAM GPU-8-CORE': '1.950.000kzs',
+        '512GB SSD 16 GB RAM GPU-8-CORE': '2.450.000kzs'
+    },
+    MacBookPro13: {
+        '256GB SSD 16 GB RAM GPU-8-CORE': '2.100.000kzs',
+        '512GB SSD 16 GB RAM GPU-8-CORE': '2.900.000kzs'
+    },
+    MacBookPro16: {
+        '256GB SSD 16 GB RAM GPU-8-CORE': '2.150.000kzs',
+        '512GB SSD 16 GB RAM GPU-8-CORE': '2.950.000kzs'
     },
     AirPods4: {
         default: '275.000kzs'
@@ -73,11 +104,48 @@ const productInfo = {
                         com foco
                         em detalhes, chip poderoso e a tão aguardada porta USB-C, oferecendo uma experiência completa.`
     },
-    IpadAir: {
-        name: 'Ipad Air M3',
+    IpadAir13: {
+        name: 'Ipad Air M3 13"',
         description: storage => `O iPad Air M3 com ${storage} oferece equilíbrio entre desempenho e leveza. Ideal para estudantes, profissionais
                         e
-                        criadores de conteúdo, ele vem com o chip M3 para um uso fluido em qualquer tarefa..`
+                        criadores de conteúdo, ele vem com o chip M3 para um uso fluido em qualquer tarefa.`
+    },
+    IpadAir16: {
+        name: 'Ipad Air M3 16"',
+        description: storage => `O iPad Air M3 com ${storage} oferece equilíbrio entre desempenho e leveza. Ideal para estudantes, profissionais
+                        e
+                        criadores de conteúdo, ele vem com o chip M3 para um uso fluido em qualquer tarefa.`
+    },
+    IpadPro13: {
+        name: 'Ipad Pro M3 13"',
+        description: storage => `O iPad Pro M3 com ${storage} é o tablet mais avançado da Apple, com poder de processamento profissional para
+                        criação,
+                        edição e multitarefas exigentes. Ideal para quem busca performance sem abrir mão da mobilidade.`
+    },
+    IpadPro16: {
+        name: 'Ipad Pro M3 16"',
+        description: storage => ` O iPad Pro M3 com ${storage} é o tablet mais avançado da Apple, com poder de processamento profissional para
+                        criação,
+                        edição e multitarefas exigentes. Ideal para quem busca performance sem abrir mão da mobilidade.`
+    },
+    MacBookAir13: {
+        name: 'MacBook Air M4 13"',
+        description: storage => `  O MacBook Air com ${storage} chip M4 combina potência e portabilidade com um design ultrafino e leve.`
+    },
+    MacBookAir16: {
+        name: 'MacBook Air M4 16"',
+        description: storage => `  O MacBook Air com ${storage} chip M4 combina potência e portabilidade com um design ultrafino e leve.`
+    },
+   
+    MacBookPro13: {
+        name: 'MacBook Pro M4 13"',
+        description: storage => `O MacBook Pro com ${storage} chip M4 traz velocidade, bateria duradoura e gráficos incríveis para tarefas profissionais e criativas.`
+    },
+    MacBookPro16: {
+        name: 'MacBook Pro M4 16"',
+        description: storage => `O MacBook Pro com ${storage} chip M4 traz velocidade, bateria duradoura e
+                        gráficos
+                        incríveis para tarefas profissionais e criativas.`
     },
     Iphone16e: {
         name: 'iPhone 16e',
@@ -105,7 +173,8 @@ const productInfo = {
     AppleWatchSeries10: {
         name: 'Apple Watch Series 10',
         description: '  O Apple Watch Series 10 traz um novo design, sensores de saúde mais precisos e recursos inteligentes. '                
-    }
+    },
+   
 };
 
 // Formata cor para exibição

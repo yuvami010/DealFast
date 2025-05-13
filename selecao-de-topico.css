@@ -177,6 +177,10 @@ header {
   height: 1.5rem;
 }
 
+.topico>a{
+  text-decoration: none;
+}
+
 .topico:hover {
   cursor: pointer;
 }
@@ -207,3 +211,26 @@ header {
 #unica {
   height: 60px;
 }
+
+
+/* Estilo do botão do carrinho */
+.carrinho-com-contador {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo do contador */
+#contador-carrinho {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #289094;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: none; /* Só aparece se tiver itens */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px white;
+}
+

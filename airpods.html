@@ -10,14 +10,10 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
-
-
-
-
     <!-- Início do cabeçalho da página -->
     <header>
         <a href="#" class="logo">Deal<span>Fast</span></a>
@@ -32,10 +28,16 @@
                 <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
-                <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
-                <!-- Botão do usuário com ícone -->
-                <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
-                        style="font-size: 20px;"></i></button>
+                <div class="btn">
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
+                    <!-- Botão do usuário com ícone -->
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -47,15 +49,15 @@
 
             <div class="container-sessao-1">
                 <div class="texto">
-                    <p class="p-sessao-1"> Adiquira já os seus AirPods. <br>
+                    <p class="p-sessao-1"> Adiquira já os seus AirPods. 
                         <span class="span-sessao-1"> Os AirPods ideais para você.
                             Design moderno e som envolvente, os AirPods são perfeitos para
-                            música, chamadas ou simplesmente curtir o silêncio com cancelamento de ruído. </span>
+                            música, chamadas ou  curtir  </span>
                     </p>
                 </div>
                 <div class="imagem">
                     <!-- Imagem da seção -->
-                    <img src="img-airpods/img-sessao-1/airpods.png" alt="macbook">
+                    <img src="categoria/airpods.png" alt="macbook">
                 </div>
             </div>
         </section>
@@ -67,9 +69,9 @@
             <p class="p-sessao-2">Modelos disponiveis.<span class="span-sessao-2"> É só escolher.</span></p>
 
             <div class="agrupamento-img-p">
-                <div class="sub-container-mini">
+                <div class="sub-container-mini" onclick="abrirModal('AirPodsPro2')">
                     <p class="modelo-produto">AirPods Pro 2</p>
-                    <img src="img-mac/img-sessao-2/macbook-air.png" alt="" srcset="">
+                    <img src="airpods/Pro2/white.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -79,9 +81,9 @@
 
                 </div>
                 
-                <div class="sub-container-mini">
+                <div class="sub-container-mini" onclick="abrirModal('AirPods4')">
                     <p class="modelo-produto">AirPods 4</p>
-                    <img src="img-mac/img-sessao-2/macbook-pro.png" alt="" srcset="">
+                    <img src="airpods/4/white.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -92,7 +94,7 @@
 
                 <div class="sub-container-mini">
                     <p class="modelo-produto">AirPods Max</p>
-                    <img src="img-mac/img-sessao-2/imac.png" alt="" srcset="">
+                    <img src="airpods/Max/black.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -174,6 +176,60 @@
         </section>
 
     </main>
+
+    <section class="modais">
+        <dialog id="AirPods4" data-img-folder="airpods/4/" data-default-color="white">
+            <span class="close-modal" onclick="fecharModal('AirPods4')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="airpods/4/.png" alt="">
+                </div>
+                <div class="right">
+                    <h2 id="product-title"></h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description">
+
+                    </p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Som Adaptativo com ajuste automático ao ambiente</li>
+                        <li>Controles por toque para música e chamadas</li>
+                        <li>Integração com a Siri e emparelhamento instantâneo</li>
+                        <li>Resistência a suor e água (IPX4)</li>
+                    </ul>
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="AirPodsPro2" data-img-folder="airpods/Pro2/" data-default-color="white">
+            <span class="close-modal" onclick="fecharModal('AirPodsPro2')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="airpods/Pro2/" alt="iPhone 16 Pro">
+                </div>
+                <div class="right">
+                    <h2 id="product-title"></h2>
+                    <h4 id="product-price"> </h4>
+                    <p id="product-description">
+                    </p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Cancelamento Ativo de Ruído com Modo Ambiente</li>
+                        <li>Áudio Espacial com rastreamento dinâmico</li>
+                        <li>Chip H2 para melhor qualidade de som e eficiência</li>
+                        <li>Sensor de detecção de pele e controles por toque</li>
+                        <li>Estojo com localização via app Buscar</li>
+                    </ul>
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+    </section>
+
 </body>
 <script src="categoria.js"></script>
+<script src="contador-carrinho.js"></script>
+<script src="modal-produtos-airpods.js"></script>
+<script src="rediricionamento.js"></script>
 </html>

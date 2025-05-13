@@ -214,18 +214,32 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">Deal<span>Fast</span></a>
-        <nav>
-            <ul class="nav-links">
-                <a href="inicio.html">Inicio</a>
-                <a href="produtos.html">Produtos</a>
-                <a href="serviços.html">Serviços</a>
-                <a href="sobre.html">Sobre</a>
-                <button id="botaoRediricionamento">Carrinho</button>
-            </ul>
-        </nav>
-    </header>
+<header>
+            <a href="#" class="logo">Deal<span>Fast</span></a>
+            <nav>
+                <div class="hamburger">
+                    <i class="bi bi-list"></i> <!-- Ícone do menu hambúrguer (usado em dispositivos móveis) -->
+                </div>
+                <!-- Links de navegação -->
+                <ul class="nav-links">
+                    <a href="inicio.html">Inicio </a>
+                    <a href="produtos.html">Produtos </a>
+                    <a href="serviços.html">Serviços</a>
+                    <a href="sobre.html">Sobre</a>
+                    <!-- Botão do carrinho com ícone -->
+                    <div class="btn">
+                        <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                            Carrinho
+                            <i class="bi bi-cart"></i>
+                            <span id="contador-carrinho">0</span>
+                        </button>
+                        <!-- Botão do usuário com ícone -->
+                        <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
+                                style="font-size: 20px;"></i></button>
+                    </div>
+                </ul>
+            </nav>
+        </header>
 
     <section class="sessao-1">
         <h2>Entrar na Conta</h2>

@@ -10,7 +10,7 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -24,16 +24,19 @@
             </div>
             <!-- Links de navegação -->
             <ul class="nav-links">
+                <a href="inicio.html">Inicio </a>
                 <a href="produtos.html">Produtos </a>
                 <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
                 <div class="btn">
-                    <button id="botaoRediricionamento"> Carrinho
-
-                        <i class="bi bi-cart"></i></button>
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
                     <!-- Botão do usuário com ícone -->
-                    <button onclick="window.location.href='entrar.php';"> Usuário <i class="bi bi-person"
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
                             style="font-size: 20px;"></i></button>
                 </div>
             </ul>
@@ -45,57 +48,57 @@
         <section class="scroll" class="sessao-1">
             <div class="container-sessao-1">
                 <div class="texto">
-                    <p class="p-sessao-1"> Deal Fast <br>
-                        <span class="span-sessao-1">A melhor forma de comprar os seus produtos apple, com serviços de
+                    <p class="p-sessao-1"> Deal Fast,
+                        <span class="span-sessao-1"> melhor forma de comprar os seus produtos apple, com serviços de
                             reparação especializados
                             para garantir o bom funcionamento do seu dispositivo.</span>
                     </p>
                 </div>
                 <div class="imagem">
                     <!-- Imagem da seção -->
-                    <img src="img-sessao-1/produtos-removebg.png" alt="macbook">
+                    <img src="categoria/produtos-removebg.png" alt="macbook">
                 </div>
             </div>
 
             <div class="agrupamento-img-p">
                 <a href="mac.html">
                     <div class="sub-container-mini">
-                        <img src="img-sessao-1/mac.png" alt="" srcset="">
+                        <img src="categoria//mac.png" alt="" srcset="">
                         <p class="model">Mac</p>
                     </div>
                 </a>
 
                 <a href="ipad.html">
                     <div class="sub-container-mini">
-                        <img src="img-sessao-1/ipad.png" alt="" srcset="">
+                        <img src="categoria//ipad.png" alt="" srcset="">
                         <p class="model">Ipad</p>
                     </div>
                 </a>
 
                 <a href="iphone.html">
                     <div class="sub-container-mini">
-                        <img src="img-sessao-1/iphone.png" alt="" srcset="">
+                        <img src="categoria//iphone.png" alt="" srcset="">
                         <p class="model">Iphone</p>
                     </div>
                 </a>
 
                 <a href="Apple watch.html">
                     <div class="sub-container-mini">
-                        <img src="img-sessao-1/apple watch.png" alt="" srcset="">
+                        <img src="categoria//apple watch.png" alt="" srcset="">
                         <p class="model">Apple watch</p>
                     </div>
                 </a>
 
                 <a href="Airpods.html">
                     <div class="sub-container-mini">
-                        <img src="img-sessao-1/airpods.png" alt="" srcset="">
+                        <img src="categoria//airpods.png" alt="" srcset="">
                         <p class="model">Airpods</p>
                     </div>
                 </a>
 
                 <a href="Acessórios.html">
                     <div class="sub-container-mini">
-                        <img src="img-sessao-1/aessorios.png" alt="" srcset="">
+                        <img src="categoria//aessorios.png" alt="" srcset="">
                         <p class="model">Acessórios</p>
                     </div>
                 </a>
@@ -109,32 +112,32 @@
             <p class="p-sessao-2">Novidades.<span class="span-sessao-2">Descubra os últimos lançamentos.</span></p>
 
             <div class="agrupamento-img-p">
-                <div class="sub-container" onclick="abrirModal('modalMacBookProM4')">
+                <div class="sub-container" onclick="abrirModal('MacBookPro13')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">MacBook Pro M4</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-mac" src="mac/Pro/preto.png" alt="">
+                    <img src="mac/Pro/black.png" alt="">
                 </div>
 
-                <div class="sub-container" onclick="abrirModal('IpadAir')">
+                <div class="sub-container" onclick="abrirModal('IpadAir13')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">Ipad Air M3</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-ipad" src="ipad/Air/cinza.png" alt="">
+                    <img src="ipad/Air/silver.png" alt="">
                 </div>
 
                 <div class="sub-container" onclick="abrirModal('Iphone16e')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">Iphone 16e</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-iphone" src="iphones/16E/preto.png" alt="">
+                    <img src="iphones/16E/black.png" alt="">
                 </div>
 
                 <div class="sub-container" onclick="abrirModal('AppleWatchSeries10')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">Apple Watch Series 10</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-applewatch" src="applewatch/Series10/cinza.png" alt="">
+                    <img src="applewatch/Series10/silver.png" alt="">
                 </div>
 
             </div>
@@ -164,19 +167,19 @@
             <div class="agrupamento-img-p">
 
                 <div class="abrir_modal sub-container-medio" onclick="abrirModal('modal1')">
-                    <img src="img-sessao-4/icone-entrega.png" alt="">
+                    <img src="diferença/icone-entrega.png" alt="">
                     <p>Receba os seus produtos em casa sem gastos de
                         envios.</p>
                 </div>
 
 
                 <div class="abrir_modal sub-container-medio" onclick="abrirModal('modal2')">
-                    <img src="img-sessao-4/icone-compras.png" alt="">
+                    <img src="diferença/icone-compras.png" alt="">
                     <p>Realize suas compras online no conforto de sua casa na Deal Fast.</p>
                 </div>
 
                 <div class="abrir_modal sub-container-medio" onclick="abrirModal('modal3')">
-                    <img id="largura" src="img-sessao-4/icone-serviço.png" alt="">
+                    <img id="largura" src="diferença/icone-serviço.png" alt="">
                     <p>Agendamento de serviços no
                         conforto de sua casa.</p>
                 </div>
@@ -191,32 +194,32 @@
 
             <div class="agrupamento-img-p">
 
-                <div class="sub-container" onclick="abrirModal('modalMacBookAirM4')">
+                <div class="sub-container" onclick="abrirModal('MacBookAir13')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">MacBook Air M4</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-mac" src="mac/Air/azul.png" alt="">
+                    <img src="mac/Air/blue.png" alt="">
                 </div>
 
-                <div class="sub-container" onclick="abrirModal('IpadProM3')">
+                <div class="sub-container" onclick="abrirModal('IpadPro13')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">Ipad Pro M4</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-ipad" src="ipad/Pro/cinza.png" alt="">
+                    <img src="ipad/Pro/silver.png" alt="">
                 </div>
 
                 <div class="sub-container" onclick="abrirModal('Iphone16Pro')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">Iphone 16 Pro</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img id="img-iphone" src="iphones/16Pro/preto.png" alt="">
+                    <img src="iphones/16Pro/black.png" alt="">
                 </div>
 
                 <div class="sub-container" onclick="abrirModal('AirPodsPro2')">
                     <p class="modelo">Compre já</p>
                     <p class="modelo modelo-negrito">AirPods Pro 2</p>
                     <p class="modelo">Desde 700.000 aoa</p>
-                    <img class="img-airpods" src="airpods/Pro2/branco.png" alt="">
+                    <img src="airpods/Pro2/white.png" alt="">
                 </div>
             </div>
         </section>
@@ -293,28 +296,30 @@
                 nossos técnicos.</p>
 
             <div class="agrupamento-img-p">
-                <div class="sub-container-medios">
-                    <img src="img-sessao-9/grid-nav-icon-repair-iphone.image.large_2x.png" alt="">
-                    <p> Assistência para o seu Iphone e
-                        o seu Ipad.</p>
-                </div>
 
-
-                <div class="sub-container-medios">
-                    <img src="img-sessao-9/grid-nav-icon-repair-mac.image.large_2x.png" alt="">
+                <div class="sub-container-medios" id="rediricionamento-reparacao-mac">
+                    <img src="icone-serviço/grid-nav-icon-repair-mac.image.large_2x.png" alt="">
                     <p> Reparação para o seu mac.</p>
                 </div>
-
-
-                <div class="sub-container-medios">
-                    <img src="img-sessao-9/grid-nav-icon-repair-watch.image.large_2x.png" alt="">
+                <div class="sub-container-medios" id="rediricionamento-reparacao-ipad">
+                    <img src="icone-serviço/grid-nav-icon-repair-ipad.image.large_2x.png" alt="">
+                    <p> Assistência para o seu
+                        o seu Ipad.</p>
+                </div>
+                <div class="sub-container-medios" id="rediricionamento-reparacao-iphone">
+                    <img src="icone-serviço/grid-nav-icon-repair-iphone.image.large_2x.png" alt="">
+                    <p> Assistência para o seu Iphone .</p>
+                </div>
+                <div class="sub-container-medios" id="rediricionamento-reparacao-applewatch">
+                    <img src="icone-serviço/grid-nav-icon-repair-watch.image.large_2x.png" alt="">
                     <p> Cuidado completo para o seu apple
                         watch.</p>
                 </div>
-                <div class="sub-container-medios">
-                    <img src="img-sessao-9/grid-nav-icon-repair-airpods.image.large_2x.png" alt="">
+                <div class="sub-container-medios" id="rediricionamento-reparacao-airpods">
+                    <img src="icone-serviço/grid-nav-icon-repair-airpods.image.large_2x.png" alt="">
                     <p>Solução para os seus airpods danificados.</p>
                 </div>
+
             </div>
         </section>
 
@@ -327,7 +332,7 @@
     <!-- Footer -->
 
     <section id="modais">
-        
+
         <dialog id="AppleWatchSeries10" data-img-folder="applewatch/Series10/" data-default-color="black">
             <span class="close-modal" onclick="fecharModal('AppleWatchSeries10')">×</span>
             <div class="modal-content">
@@ -335,20 +340,20 @@
                     <img id="product-image" class="lef-img" src="applewatch/Series10/.png" alt="iPhone 16 Pro">
                 </div>
                 <div class="right">
-                    <h2 id="product-title">Apple Watch Series 10 ()</h2>
+                    <h2 id="product-title"></h2>
                     <h4 id="product-price"> </h4>
                     <p id="product-description">
-                        
+
                     </p>
                     <h3>Especificações:</h3>
                     <ul>
                         <li>Tela Always-On com brilho aprimorado</li>
-                        <li>Monitoramento de frequência cardíaca, ECG e oxigênio</li>        
+                        <li>Monitoramento de frequência cardíaca, ECG e oxigênio</li>
                         <li>Chip S10 com desempenho otimizado</li>
                         <li>GPS integrado e conectividade 4G LTE</li>
                         <li>Resistência à água até 50 metros</li>
                     </ul>
-                    
+
                     <button class="add-cart">Adicionar ao Carrinho</button>
                 </div>
             </div>
@@ -356,17 +361,342 @@
         <!-- Modal 16 Pro Max -->
 
         <!-- Modais Produtos -->
-        <dialog id="modal1">
+
+
+
+        <dialog id="MacBookAir13" data-img-folder="mac/Air/" data-default-color="blue"
+            data-default-storage="256GB SSD 16 GB RAM GPU-8-CORE">
+            <span class="close-modal" onclick="fecharModal('MacBookAir13')">×</span>
             <div class="modal-content">
-                <span class="close-modal" onclick="fecharModal('modal1')">×</span>
-                <h2 class="serviços">Entrega Rápida</h2>
-                <p>Receba seu pedido sem custos de envio e com rapidez. Nosso sistema de rastreamento permite acompanhar
-                    cada etapa da entrega.</p>
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="mac/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Azul</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Liquid Retina de 13,6" ou 15,3"</li>
+                        <li>Chip M4 com CPU de 8 núcleos</li>
+                        <li>Compatível com até dois monitores externos</li>
+                        <li>Touch ID e Magic Keyboard retroiluminado</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options armazenamento">
+                        <button data-storage="256GB SSD 16 GB RAM GPU-8-CORE">256 GB SSD 16 GB RAM GPU-8-CORE</button>
+                        <button data-storage="512GB SSD 16 GB RAM GPU-8-CORE">512 GB SSD 16 GB RAM GPU-10-CORE</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button>13 Polegadas</button>
+                        <button onclick="trocarModal('MacBookAir13', 'MacBookAir16')">16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="MacBookAir16" data-img-folder="mac/Air/" data-default-color="blue"
+            data-default-storage="256GB SSD 16 GB RAM GPU-8-CORE">
+            <span class="close-modal" onclick="fecharModal('MacBookAir16')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="mac/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Azul</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title"></h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Liquid Retina de 13,6" ou 15,3"</li>
+                        <li>Chip M4 com CPU de 8 núcleos</li>
+                        <li>Compatível com até dois monitores externos</li>
+                        <li>Touch ID e Magic Keyboard retroiluminado</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options armazenamento">
+                        <button data-storage="256GB SSD 16 GB RAM GPU-8-CORE">256 GB SSD 16 GB RAM GPU-8-CORE</button>
+                        <button data-storage="512GB SSD 16 GB RAM GPU-8-CORE">512 GB SSD 16 GB RAM GPU-10-CORE</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button onclick="trocarModal('MacBookAir16', 'MacBookAir13')">13 Polegadas</button>
+                        <button>16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="MacBookPro13" data-img-folder="mac/Pro/" data-default-color="black"
+            data-default-storage="256GB SSD 16 GB RAM GPU-8-CORE">
+            <span class="close-modal" onclick="fecharModal('MacBookPro13')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="mac/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title"></h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li> Tela Liquid Retina XDR de 14"/16"</li>
+                        <li> Chip M4 com COU e GPU otimizadas</li>
+                        <li> Sistema de refrigeração ativo</li>
+                        <li> Touch ID e Magic Keyboard</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options armazenamento">
+                        <button data-storage="256GB SSD 16 GB RAM GPU-8-CORE">256 GB SSD 16 GB RAM GPU-8-CORE</button>
+                        <button data-storage="512GB SSD 16 GB RAM GPU-8-CORE">512 GB SSD 16 GB RAM GPU-10-CORE</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button>13 Polegadas</button>
+                        <button onclick="trocarModal('MacBookPro13', 'MacBookPro16')">16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="MacBookPro16" data-img-folder="mac/Pro/" data-default-color="black"
+            data-default-storage="256GB SSD 16 GB RAM GPU-8-CORE">
+            <span class="close-modal" onclick="fecharModal('MacBookPro16')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="mac/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title"></h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li> Tela Liquid Retina XDR de 14"/16"</li>
+                        <li> Chip M4 com COU e GPU otimizadas</li>
+                        <li> Sistema de refrigeração ativo</li>
+                        <li> Touch ID e Magic Keyboard</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options armazenamento">
+                        <button data-storage="256GB SSD 16 GB RAM GPU-8-CORE">256 GB SSD 16 GB RAM GPU-8-CORE</button>
+                        <button data-storage="512GB SSD 16 GB RAM GPU-8-CORE">512 GB SSD 16 GB RAM GPU-10-CORE</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button onclick="trocarModal('MacBookPro16', 'MacBookPro13')">13 Polegadas</button>
+                        <button>16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="IpadAir13" data-img-folder="ipad/Air/" data-default-color="purple" data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('IpadAir13')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="ipad/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="purple" style="background: purple; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Deserto</button>
+                            <button data-color="silver" style="background: silver;">Deserto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Liquid Retina de 10.9"</li>
+                        <li>Chip M3 de alto desempenho</li>
+                        <li>Câmera frontal de 12MP com Centralização</li>
+                        <li>Autonomia para o dia todo</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button>13 Polegadas</button>
+                        <button onclick="trocarModal('IpadAir13', 'IpadAir16')">16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="IpadAir16" data-img-folder="ipad/Air/" data-default-color="purple" data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('IpadAir16')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="ipad/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="purple" style="background: purple; color: white;">Preto</button>
+                            <button data-color="blue" style="background: blue;">Deserto</button>
+                            <button data-color="silver" style="background: silver;">Deserto</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Liquid Retina de 10.9"</li>
+                        <li>Chip M3 de alto desempenho</li>
+                        <li>Câmera frontal de 12MP com Centralização</li>
+                        <li>Autonomia para o dia todo</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button onclick="trocarModal('IpadPro16', 'IpadPro13')">13 Polegadas"</button>
+                        <button>16 Polegadas"</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="IpadPro13" data-img-folder="ipad/Pro/" data-default-color="black" data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('IpadPro13')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="ipad/Pro/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="silver" style="background: silver;">Cinza</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Liquid Retina XDR de 12.9"</li>
+                        <li>Chip M3 Pro com desempenho gráfico superior</li>
+                        <li>ProMotion com taxa de atualização de 120Hz</li>
+                        <li>Câmeras com sensor LiDAR e TrueDepth</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button>13 Polegadas</button>
+                        <button onclick="trocarModal('IpadPro13', 'IpadPro16')">16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="IpadPro16" data-img-folder="ipad/Pro/" data-default-color="black" data-default-storage="128GB">
+            <span class="close-modal" onclick="fecharModal('IpadPro16')">×</span>
+            <div class="modal-content">
+                <div class="left">
+                    <img id="product-image" class="lef-img" src="ipad/Air/" alt="iPhone 16 Pro">
+                    <div class="options">
+                        <h3>Cores Disponíveis:</h3>
+                        <div class="color-options">
+                            <button data-color="black" style="background: black; color: white;">Preto</button>
+                            <button data-color="silver" style="background: silver;">Cinza</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="product-title">iPhone 16 Pro 64GB ()</h2>
+                    <h4 id="product-price"></h4>
+                    <p id="product-description"></p>
+                    <h3>Especificações:</h3>
+                    <ul>
+                        <li>Tela Liquid Retina XDR de 12.9"</li>
+                        <li>Chip M3 Pro com desempenho gráfico superior</li>
+                        <li>ProMotion com taxa de atualização de 120Hz</li>
+                        <li>Câmeras com sensor LiDAR e TrueDepth</li>
+                    </ul>
+                    <h3 id="storage">Escolha o Armazenamento:</h3>
+                    <div class="storage-options">
+                        <button data-storage="128GB">128GB</button>
+                        <button data-storage="256GB">256GB</button>
+                        <button data-storage="512GB">512GB</button>
+                    </div>
+
+                    <h3 id="polegadas">Polegadas</h3>
+                    <div class="modelos-buttons">
+                        <button onclick="trocarModal('IpadPro16', 'IpadPro13')">13 Polegadas</button>
+                        <button>16 Polegadas</button>
+                    </div>
+
+                    <button class="add-cart">Adicionar ao Carrinho</button>
+                </div>
             </div>
         </dialog>
 
-
-        <dialog id="Iphone16Pro" data-img-folder="iphones/16Pro/" data-default-color="black" data-default-storage="128GB">
+        <dialog id="Iphone16Pro" data-img-folder="iphones/16Pro/" data-default-color="black"
+            data-default-storage="128GB">
             <span class="close-modal" onclick="fecharModal('Iphone16Pro')">×</span>
             <div class="modal-content">
                 <div class="left">
@@ -502,7 +832,7 @@
                     <h2 id="product-title">Apple Watch SE ()</h2>
                     <h4 id="product-price"></h4>
                     <p id="product-description">
-                       
+
                     </p>
                     <h3>Especificações:</h3>
                     <ul>
@@ -554,51 +884,8 @@
             </div>
         </dialog>
 
-        <dialog id="modalMacBookProM4" data-img-folder="img-sessao-3">
-            <span class="close-modal" onclick="fecharModal('modalMacBookProM4')">×</span>
-            <div class="modal-content">
-                <div class="left-">
-                    <img src="img-mac/img-sessao-1/macbook-pro.png" alt="iPhone 16 Pro">
-                    <div class="options-">
-                        <h3>Cores Disponíveis:</h3>
-                        <div class="color-options-">
-                            <button data-color="silver" style="background: silver;">Prata</button>
-                            <button data-color="black" style="background: black; color: white;">Preto</button>
-                            <button data-color="blue" style="background: blue;">Azul</button>
-                        </div>
-                        <h3>Escolha as Configurações:</h3>
-                        <div class="storage-options-">
-                            <button>256 GB SSD/ 16 GB RAM/ GPU-8-CORE</button>
-                            <button>512 GB SSD/ 16 GB RAM/ GPU-10-CORE</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-">
-                    <h2 id="product-title">MacBook Pro M4</h2>
-                    <h4 id="product-price"> 900.000kzs</h4>
-                    <p id="product-description">O novo MacBook Pro com chip M4 traz velocidade, bateria duradoura e
-                        gráficos
-                        incríveis para tarefas profissionais e criativas.</p>
-                    <h3>Especificações:</h3>
-                    <ul>
-                        <li> Tela Liquid Retina XDR de 14"/16"</li>
-                        <li> Chip M4 com COU e GPU otimizadas</li>
-                        <li> Até 22h de bateria</li>
-                        <li> Sistema de refrigeração ativo</li>
-                        <li> Touch ID e Magic Keyboard</li>
-                    </ul>
-                    <div class="modelos-secao-">
-                        <h3>Polegadas</h3>
-                        <div class="modelos-buttons-">
-                            <button onclick="trocarModal('modalProt', 'modalBasico')">13 Polegadas</button>
-                            <button>13 Polegadas</button>
-                        </div>
-                    </div>
-                    <button class="add-cart-">Adicionar ao Carrinho</button>
-                </div>
-        </dialog>
 
-        <dialog id="IpadAir" data-img-folder="ipad/Air/" data-default-color="purple" data-default-storage="256GB">
+        <dialog id="IpadAi" data-img-folder="ipad/Air/" data-default-color="purple" data-default-storage="256GB">
             <span class="close-modal" onclick="fecharModal('IpadAir')">×</span>
             <div class="modal-content">
                 <div class="left-">
@@ -622,14 +909,13 @@
                     <h2 id="product-title">Ipad Air M3</h2>
                     <h4 id="product-price"></h4>
                     <p id="product-description">
-                        
+
                     </p>
                     <h3>Especificações:</h3>
                     <ul>
                         <li>Tela Liquid Retina de 10.9"</li>
                         <li>Chip M3 de alto desempenho</li>
                         <li>Câmera frontal de 12MP com Centralização</li>
-                        <li>Conectividade Wi-Fi 6 e 5G</li>
                         <li>Autonomia para o dia todo</li>
                     </ul>
                     <div class="modelos-secao-">
@@ -643,9 +929,17 @@
                 </div>
         </dialog>
 
+        <dialog id="modal1" class="modal-servico">
+            <div class="modalcontent">
+                <span class="close-modal" onclick="fecharModal('modal1')">×</span>
+                <h2 class="serviços">Entrega Rápida</h2>
+                <p>Receba seu pedido sem custos de envio e com rapidez. Nosso sistema de rastreamento permite acompanhar
+                    cada etapa da entrega.</p>
+            </div>
+        </dialog>
 
-        <dialog id="modal2">
-            <div class="modal-content">
+        <dialog id="modal2" class="modal-servico">
+            <div class="modalcontent">
                 <h2 class="serviços"> Compra Segura</h2>
                 <span class="close-modal" onclick="fecharModal('modal2')">×</span>
                 <p>Ambiente protegido com criptografia para garantir sua segurança. Métodos de pagamento seguros e
@@ -653,8 +947,8 @@
             </div>
         </dialog>
 
-        <dialog id="modal3">
-            <div class="modal-content">
+        <dialog id="modal3" class="modal-servico">
+            <div class="modalcontent">
                 <span class="close-modal" onclick="fecharModal('modal3')">×</span>
                 <h2 class="serviços">Serviços à Domicílio</h2>
                 <p>Agende assistência técnica no conforto de sua casa. Equipe especializada e atendimento rápido e
@@ -696,7 +990,6 @@
                     <ul>
                         <li>Tela Liquid Retina de 13,6" ou 15,3"</li>
                         <li>Chip M4 com CPU de 8 núcleos</li>
-                        <li>Até 18 horas de autonomia de bateria</li>
                         <li>Compatível com até dois monitores externos</li>
                         <li>Touch ID e Magic Keyboard retroiluminado</li>
                     </ul>
@@ -711,60 +1004,15 @@
                 </div>
         </dialog>
 
-        <dialog id="IpadProM3" data-img-folder="img-sessao-3">
-            <span class="close-modal" onclick="fecharModal('IpadProM3')">×</span>
-            <div class="modal-content">
-                <div class="left-">
-                    <img src="img-mac/img-sessao-2/macbook-air.png" alt="iPhone 16 Pro">
-                    <div class="options-">
-                        <h3>Cores Disponíveis:</h3>
-                        <div class="color-options-">
-                            <button data-color="silver" style="background: silver;">Prata</button>
-                            <button data-color="black" style="background: black; color: white;">Preto</button>
-                            <button data-color="blue" style="background: blue;">Azul</button>
-                        </div>
-                        <h3>Escolha as Configurações:</h3>
-                        <div class="storage-options-">
-                            <button>256 GB SSD/ 16 GB RAM/ GPU-8-CORE</button>
-                            <button>512 GB SSD/ 16 GB RAM/ GPU-10-CORE</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-">
-                    <h2 id="product-title">Ipad Pro M3</h2>
-                    <h4 id="product-price"> 900.000kzs</h4>
-                    <p id="product-description">
-                        O iPad Pro M3 é o tablet mais avançado da Apple, com poder de processamento profissional para
-                        criação,
-                        edição e multitarefas exigentes. Ideal para quem busca performance sem abrir mão da mobilidade.
-                    </p>
-                    <h3>Especificações:</h3>
-                    <ul>
-                        <li>Tela Liquid Retina XDR de 12.9"</li>
-                        <li>Chip M3 Pro com desempenho gráfico superior</li>
-                        <li>ProMotion com taxa de atualização de 120Hz</li>
-                        <li>Câmeras com sensor LiDAR e TrueDepth</li>
-                        <li>Compatível com Apple Pencil 2ª geração</li>
-                        <li>Conectividade 5G e Wi-Fi 6E</li>
-                    </ul>
-                    <div class="modelos-secao-">
-                        <h3>Polegadas</h3>
-                        <div class="modelos-buttons-">
-                            <button onclick="trocarModal('modalProt', 'modalBasico')">13 Polegadas</button>
-                            <button>13 Polegadas</button>
-                        </div>
-                    </div>
 
-                    <button class="add-cart-">Adicionar ao Carrinho</button>
-                </div>
-        </dialog>
-
-  
 
 
     </section>
 
 </body>
-<script src="inicio.js"></script>
 
+<script src="contador-carrinho.js"></script>
+<script src="scroll.js"></script>
+<script src="modal.js"></script>
+<script src="rediricionamento.js"></script>
 </html>

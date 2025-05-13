@@ -10,7 +10,7 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -24,14 +24,19 @@
             </div>
             <!-- Links de navegação -->
             <ul class="nav-links">
-                <a href="inicio.html">Inicio</a>
-                <a href="produtos.html">Produtos</a>
+                <a href="inicio.html">Inicio </a>
+                <a href="produtos.html">Produtos </a>
+                <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
                 <div class="btn">
-                    <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
                     <!-- Botão do usuário com ícone -->
-                    <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
                             style="font-size: 20px;"></i></button>
                 </div>
             </ul>
@@ -47,10 +52,10 @@
 
             <h1>Reparação e assistência do Mac</h1>
 
-            <p class="textos">Estamos aqui para ajudar. As reparações certificadas pela Apple são realizadas por
+            <p class="textos">As reparações são realizadas por
                 especialistas de
                 confiança que utilizam apenas peças Apple genuínas — concebidas, testadas e fabricadas de acordo com
-                <br> as
+                 as
                 normas de segurança e desempenho da Apple.
             </p>
         </section>
@@ -60,7 +65,7 @@
 
             <h1>Como posso obter assistência para o meu Mac?</h1>
 
-            <img src="img-sessao-4/icone-serviço.png" alt="">
+            <img src="diferença/icone-serviço.png" alt="">
 
             <p class="texto">Agendar uma visita</p>
 
@@ -99,8 +104,8 @@
                 <h2>Faça login para continuar</h2>
                 <p>Entre na sua conta ou cadastre-se para agendar sua assistência.</p>
                 <div class="modal-buttons">
-                    <button id="btnEntrar">Entrar</button>
-                    <button id="btnCriarConta">Criar conta</button>
+                    <button id="btnEntrarReparacao">Entrar</button>
+                    <button id="btnCriarContaReparacao">Criar conta</button>
                 </div>
             </div>
         </dialog>
@@ -109,6 +114,8 @@
     </main>
 
 </body>
-<script src="reparacao-mac.js"></script>
-
+<script src="scroll.js"></script>
+<script src="contador-carrinho.js"></script>
+<script src="modal.js"></script>
+<script src="rediricionamento.js"></script>
 </html>

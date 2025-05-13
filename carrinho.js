@@ -1,10 +1,7 @@
-// ===== Redirecionamento de página =====
-document.getElementById("btnEntrar").addEventListener("click", function(){
-  window.location.href = "entrar-carrinho.php";
-});
-document.getElementById("btnCriarConta").addEventListener("click", function(){
-  window.location.href = "criarconta-carrinho.php";
-});
+// ===== Função para formatar valores com ponto como separador de milhar =====
+function formatarValor(valor) {
+  return valor.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " AOA";
+}
 
 // ===== Função de feedback visual =====
 function mostrarFeedback(msg) {
@@ -15,6 +12,22 @@ function mostrarFeedback(msg) {
     setTimeout(() => {
       feedback.style.display = "none";
     }, 2000);
+  }
+}
+
+// ===== Atualizar contador do carrinho =====
+function atualizarContadorCarrinho() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalQuantidade = 0;
+
+  cart.forEach(item => {
+    totalQuantidade += item.quantity;
+  });
+
+  const contador = document.getElementById("contador-carrinho");
+  if (contador) {
+    contador.innerText = totalQuantidade;
+    contador.style.display = totalQuantidade > 0 ? "inline-block" : "none";
   }
 }
 
@@ -44,7 +57,8 @@ function renderCart() {
     `;
 
     const totalElement = document.getElementById("total-value");
-    if (totalElement) totalElement.innerText = "0,00 AOA";
+    if (totalElement) totalElement.innerText = "0 AOA";
+    atualizarContadorCarrinho();
     return;
   } else {
     if (cartTable) cartTable.style.display = "";
@@ -69,7 +83,7 @@ function renderCart() {
       </td>
       <td>
         <span class="card-product-price">
-          ${product.price.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} AOA
+          ${formatarValor(product.price)}
         </span>
       </td>
       <td>
@@ -77,7 +91,7 @@ function renderCart() {
       </td>
       <td>
         <span class="product-subtotal">
-          ${subtotal.toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} AOA
+          ${formatarValor(subtotal)}
         </span>
       </td>
       <td>
@@ -90,13 +104,11 @@ function renderCart() {
 
   const totalElement = document.getElementById("total-value");
   if (totalElement) {
-    totalElement.innerText = totalCarrinho.toLocaleString("pt-PT", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    }) + " AOA";
+    totalElement.innerText = formatarValor(totalCarrinho);
   }
 
   addCartEventListeners();
+  atualizarContadorCarrinho();
 }
 
 // ===== Remover produto do carrinho =====
@@ -171,24 +183,7 @@ function addCartEventListeners() {
 }
 
 // ===== Renderiza o carrinho no carregamento da página =====
-document.addEventListener("DOMContentLoaded", renderCart);
-
-// ===== IntersectionObserver (animação scroll) =====
-const myObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  renderCart();
+  atualizarContadorCarrinho();
 });
-document.querySelectorAll('.scroll').forEach(element => myObserver.observe(element));
-
-// ===== Código de modais =====
-function abrirModal(id) { document.getElementById(id).showModal(); }
-function fecharModal(id) { document.getElementById(id).close(); }
-function trocarModal(fechar, abrir) {
-  fecharModal(fechar);
-  abrirModal(abrir);
-}

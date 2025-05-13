@@ -10,7 +10,7 @@
     <!-- Links para os icones boostrap offline-->
     <link rel="stylesheet" href="font/bootstrap-icons.min.css">
     <!-- Link para o favicon -->
-    <link rel="shortcut icon" href="favicon/Imagem WhatsApp 2024-09-21 às 22.03.36_6c857661.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
 </head>
 
 <body>
@@ -32,10 +32,16 @@
                 <a href="serviços.html">Serviços</a>
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
-                <button id="botaoRediricionamento">Carrinho <i class="bi bi-cart"></i></button>
-                <!-- Botão do usuário com ícone -->
-                <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
-                        style="font-size: 20px;"></i></button>
+                <div class="btn">
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
+                    <!-- Botão do usuário com ícone -->
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
+                            style="font-size: 20px;"></i></button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -46,14 +52,14 @@
         <section class="scroll" class="sessao-1">
             <div class="container-sessao-1">
                 <div class="texto">
-                    <p class="p-sessao-1"> Descubra o Ipad ideal para você. <br>
+                    <p class="p-sessao-1"> Descubra o Ipad ideal para você.
                         <span class="span-sessao-1"> Seja para trabalho, estudo ou lazer, o Ipad combina potência e
                             versatilidade. Explore os modelos disponíveis e leve sua criatividade a outro nível. </span>
                     </p>
                 </div>
                 <div class="imagem">
                     <!-- Imagem da seção -->
-                    <img src="img-ipad/img-sessao-1/ipad.png" alt="macbook">
+                    <img src="categoria/ipad.png" alt="macbook">
                 </div>
             </div>
         </section>
@@ -68,8 +74,8 @@
 
 
                 <div class="sub-container-mini" onclick="abrirModal('modalProt')">
-                    <p class="modelo-produto">Ipad Air</p>
-                    <img src="img-mac/img-sessao-2/macbook-air.png" alt="" srcset="">
+                    <p class="modelo-produto">Ipad Air M3</p>
+                    <img src="ipad/Air/silver.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -80,8 +86,8 @@
                 </div>
 
                 <div class="sub-container-mini">
-                    <p class="modelo-produto">Ipad Pro</p>
-                    <img src="img-mac/img-sessao-2/macbook-pro.png" alt="" srcset="">
+                    <p class="modelo-produto">Ipad Pro M3</p>
+                    <img src="ipad/Pro/silver.png" alt="" srcset="">
 
                     <div class="texto-botao">
                         <p>Desde 1111 aoa</p>
@@ -173,7 +179,8 @@
             <span class="close-modal" onclick="fecharModal('modalPro')">×</span>
             <div class="modal-content">
                 <div class="left">
-                    <img id="product-image" class="lef-img" src="img-mac/img-sessao-2/macbook-air.png" alt="iPhone 16 Pro">
+                    <img id="product-image" class="lef-img" src="img-mac/img-sessao-2/macbook-air.png"
+                        alt="iPhone 16 Pro">
                     <div class="options">
                         <h3>Cores Disponíveis:</h3>
                         <div class="color-options">
@@ -338,6 +345,8 @@
 
     </main>
 </body>
-<script src="iphone.js"></script>
-
+<script src="scroll.js"></script>
+<script src="contador-carrinho.js"></script>
+<script src="modal.js"></script>
+<script src="rediricionamento.js"></script>
 </html>

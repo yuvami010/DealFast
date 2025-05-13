@@ -29,9 +29,13 @@
                 <a href="sobre.html">Sobre</a>
                 <!-- Botão do carrinho com ícone -->
                 <div class="btn">
-
+                    <button id="rediricionamento-carrinho" class="carrinho-com-contador">
+                        Carrinho
+                        <i class="bi bi-cart"></i>
+                        <span id="contador-carrinho">0</span>
+                    </button>
                     <!-- Botão do usuário com ícone -->
-                    <button onclick="window.location.href='entrar.html';">Usuário <i class="bi bi-person"
+                    <button id="rediricionamento-entrar"> Usuário <i class="bi bi-person"
                             style="font-size: 20px;"></i></button>
                 </div>
             </ul>
@@ -119,14 +123,19 @@
                 <h2>Faça login para continuar</h2>
                 <p>Entre na sua conta ou cadastre-se para agendar sua assistência.</p>
                 <div class="modal-buttons">
-                    <button id="btnEntrar">Entrar</button>
-                    <button id="btnCriarConta">Criar conta</button>
+                    <button id="btnEntrarCarrinho">Entrar</button>
+                    <button id="btnCriarContaCarrinho">Criar conta</button>
                 </div>
             </div>
         </dialog>
 
     </main>
+
+
 </body>
 <script src="carrinho.js"></script>
-
+<script src="scroll.js"></script>
+<script src="rediricionamento.js"></script>
+<script src="modal.js"></script>
+<script src="contador-carrinho.js"></script>
 </html>
